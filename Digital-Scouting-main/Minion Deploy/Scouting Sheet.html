@@ -6,88 +6,223 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="qrcode.js"></script>    
+<script type="text/javascript" src="qrcode.js"></script>   
+<style>
+p {text-align: center;}
+</style> 
   </head>
   <body>
     <div class="testbox">
       <form action="/">
         <div class="banner">
-          <h1>Team 2791 Digital Scouting Sheet 2021</h1>
+          <h1>Team 2791 Digital Scouting Sheet 2022</h1>
         </div>
         <div class="item">
           <div class="name-item">
+	    <input type="text" name="name" placeholder="Your Name" id='nametxt'required/>
             <input type="text" name="match" placeholder="Match Number" id='match#txt' required/>
             <input type="text" name="robot" placeholder="Robot Number" id='robot#txt' required/>
-            <input type="text" name="name" placeholder="Your Name" id='nametxt'required/>
             <select name="Alliance" id="Alliance">
               <option value="volvo">Blue</option>>
               <option value="saab">Red</option>
            </select>
+            
           </div>
         </div>
 
-
+        <p><b>AUTO</b></p>
 
         <table style="width: 100%;">
           <colgroup>
+            <col style=" width:25%;">
             <col style=" width:15%;">
-            <col style=" width:30%;">
             <col style=" width:20%;">
+            <col style=" width:5%;">
             <col style=" width:15%;">
-            <col style=" width:10%;">
+            <col style=" width:15%;">
           </colgroup>
-        <thead>
-          <tr>
-            <th>Auton</th>
-            <th>Taxi</th>
-            <th>Shots</th>
-            <th>Lower</th>
-            <th>Upper</th>
-          </tr>
-        </thead>
+
         <tbody>
           <tr>
             <td>StartingPos. Placeholder</td>
               <td>
                 <div class="question">
-                  <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
-                  <label><input type="radio" value="2" name='Made'> <span>2</span></label>
-                  <label><input type="radio" value="3" name='Made'> <span>3</span></label>
-                  <label><input type="radio" value="4" name='Made'> <span>4</span></label>
-                  <label><input type="radio" value="5" name='Made'> <span>5</span></label>
+                  <label><span>Taxi?</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                  <h4 align="center">
+                    <label><span># Fed to HP</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                    <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                    <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                  </h4>
+                  <h4 align="center">
+                    <label><span># HP Shots</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                    <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                    <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                  </h4>
+                  <h4 align="center">
+                    <label><span># HP Scored</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                    <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                    <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                  </h4>
                 </div>
               </td>
               <td>
                 <div class="question">
-                  <select name="AutonShot" id="AutonShot">
+                  <label><span>Auton Shot Position</span></label><select name="AutonShot" id="AutonShot">
                     <option value="Fender">Fender</option>
                     <option value="Tarmac">Tarmac</option>
                     <option value="Fender">Launchpad</option>
                     <option value="Fender">Other</option>
                  </select>
+                  <h4 align="center">
+                    <label><span># Fed By Others</span></label><input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+                    <label><span># Given To Others</span></label><input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+                  </h4>
                 </div>
               </td>
               <td>
-                <input style='width:10%' type="number" value='0' id='AutonPts' min="1" max="5">
-                <input style='width:10%' type="number" value='0' id='AutonPts'>
-                <input style='width:10%' type="number" value='0' id='AutonPts'>
-                <input style='width:10%' type="number" value='0' id='AutonPts'>
+                    <p></p>
+                <h4 align="center">
+                    <p>Made</p>
+                </h4>
+                <h4 align="center">
+                    <p>Missed</p>
+                </h4>
               </td>
               <td>
-                <div class="question">
-                  <label><input type="radio" value="1" name='Missed'> <span>1</span></label>
-                  <label><input type="radio" value="2" name='Missed'> <span>2</span></label>
-                  <label><input type="radio" value="3" name='Missed'> <span>3</span></label>
-                  <label><input type="radio" value="4" name='Missed'> <span>4</span></label>
-                  <label><input type="radio" value="5" name='Missed'> <span>5</span></label>
-                </div>
+                <p>Lower</p>
+                <h4 align="center">
+                 <div class="question">
+                   <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+                 </div>
+                </h4>
+                <h4 align="center">
+                 <div class="question">
+                   <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+                 </div>
+                </h4>
+              </td>
+              <td>
+                <p>Upper</p>
+                <h4 align="center">
+                 <div class="question">
+                   <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+                 </div>
+                </h4>
+                <h4 align="center">
+                 <div class="question">
+                   <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+                 </div>
+                </h4>
               </td>
           </tr>
         </tbody>
         </table>
 
+        <p><b>TELEOP</b></p>
+        <table style="width: 100%;">
+          <colgroup>
+            <col style=" width:4%;">
+            <col style=" width:24%;">
+            <col style=" width:24%;">
+            <col style=" width:24%;">
+            <col style=" width:24%;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Fender</th>
+            <th>Tarmac</th>
+            <th>Launch Pad</th>
+            <th>Other</th>
+          </tr>
+        </thead>
 
 
+        <table style="width: 100%;">
+          <colgroup>
+            <col style=" width:4%;">
+            <col style=" width:12%;">
+            <col style=" width:12%;">
+            <col style=" width:12%;">
+            <col style=" width:12%;">
+            <col style=" width:12%;">
+            <col style=" width:12%;">
+            <col style=" width:12%;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Low</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>High</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>High</th>
+            <th>High</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+               <p><b>Made</b></p>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+               <p><b>Missed</b></p>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+            <td>
+               <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'>
+            </td>
+          </tr>
+        </tbody>
 
         <table style="width: 100%;">
           <colgroup>

@@ -72,7 +72,7 @@ html, body {
       padding: 5px;
       }
       select {
-      width: 100%;
+      width: 25%;
       padding: 7px 0;
       background: transparent;
       }
@@ -124,7 +124,7 @@ html, body {
       justify-content: space-between;
       }
       .name-item input, .city-item input {
-      width: calc(33% - 20px)
+      width: calc(25% - 20px)
       }
       .city-item select {
       width: calc(50% - 8px);

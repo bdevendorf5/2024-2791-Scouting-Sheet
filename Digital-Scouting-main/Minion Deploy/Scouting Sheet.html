@@ -37,33 +37,51 @@ p {text-align: center;}
             <col style=" width:25%;">
             <col style=" width:15%;">
             <col style=" width:20%;">
-            <col style=" width:5%;">
-            <col style=" width:15%;">
-            <col style=" width:15%;">
+            <col style=" width:35%;">
           </colgroup>
 
         <tbody>
           <tr>
             <td>StartingPos. Placeholder</td>
               <td>
+
+
+
+
+               <table>
+          <colgroup>
+            <col style=" width:200px;">
+            <col style=" width:200px;">
+          </colgroup>
                 <div class="question">
-                  <label><span>Taxi?</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
-                  <h4 align="center">
+                   <tr>
+                   <td>
+                    <label><span>Taxi?</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                   </td>
+                   <td>
                     <label><span># Fed to HP</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                     <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                     <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
-                  </h4>
-                  <h4 align="center">
+                   </td>
+                   </tr>
+                   <tr>
+                   <td>
                     <label><span># HP Shots</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                     <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                     <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
-                  </h4>
-                  <h4 align="center">
+                   </td>
+                   <td>
                     <label><span># HP Scored</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                     <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                     <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
-                  </h4>
+                   </td>
+                   </tr>
                 </div>
+               </table
+
+
+
+
               </td>
               <td>
                 <div class="question">
@@ -80,39 +98,45 @@ p {text-align: center;}
                 </div>
               </td>
               <td>
-                    <p></p>
-                <h4 align="center">
-                    <p>Made</p>
-                </h4>
-                <h4 align="center">
-                    <p>Missed</p>
-                </h4>
-              </td>
-              <td>
-                <p>Lower</p>
-                <h4 align="center">
-                 <div class="question">
-                   <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
-                 </div>
-                </h4>
-                <h4 align="center">
-                 <div class="question">
-                   <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
-                 </div>
-                </h4>
-              </td>
-              <td>
-                <p>Upper</p>
-                <h4 align="center">
-                 <div class="question">
-                   <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
-                 </div>
-                </h4>
-                <h4 align="center">
-                 <div class="question">
-                   <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
-                 </div>
-                </h4>
+         <table>
+          <colgroup>
+            <col style=" width:84;">
+            <col style=" width:300px;">
+            <col style=" width:300px;">
+          </colgroup>
+                   <tr>
+                     <td>
+                     </td>
+                     <td>
+                       <p><b>Lower</b></p>
+                     </td>
+                     <td>
+                       <p><b>Upper</b></p>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <p><b>Made</b></p>
+                     </td>
+                     <td>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
+                     </td>
+                     <td>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <p><b>Missed</b></p>
+                     </td>
+                     <td>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
+                     </td>
+                     <td>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
+                     </td>
+                   </tr>
+                 </table>
               </td>
           </tr>
         </tbody>
@@ -291,10 +315,10 @@ p {text-align: center;}
                        <p><b>Made</b></p>
                      </td>
                      <td>
-                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0''>
                      </td>
                      <td>
-                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
                      </td>
                    </tr>
                    <tr>
@@ -302,10 +326,10 @@ p {text-align: center;}
                        <p><b>Missed</b></p>
                      </td>
                      <td>
-                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
                      </td>
                      <td>
-                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
+                       <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'>
                      </td>
                    </tr>
                    <tr>

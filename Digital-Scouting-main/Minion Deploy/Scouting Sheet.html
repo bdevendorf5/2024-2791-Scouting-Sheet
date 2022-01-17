@@ -262,6 +262,11 @@ p {text-align: center;}
                        <label><span>Defended Efficiency</span></label><input style='width:15%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
                      </td>
                   </tr>
+                  <tr>
+                     <td>
+                       <input type="text" name="name" placeholder="Team Defended By" id='nametxt'required/>
+                     </td>
+                  </tr>
                 </table>
             </td>
             <td>
@@ -303,6 +308,16 @@ p {text-align: center;}
                        <input style='width:15%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
                      </td>
                    </tr>
+                   <tr>
+                     <td>
+                     </td>
+                     <td>
+                       <p><b>No Climb Attempt:</b></p>
+                     </td>
+                     <td>
+                       <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                     </td>
+                   </tr>
                 </table>
             </td>
             <td>
@@ -328,6 +343,14 @@ p {text-align: center;}
                  <label><span>Dead</span></label><input style='width:10%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
                </td>
              </tr>
+             <tr>
+               <td>
+                 <p><b>Endgame Defense:</b></p>
+               </td>
+               <td>
+                 <input style='width:10%' type="number" value='0' id='AutonPts' Min='0'Max='3'>
+               </td>
+             </tr>
              </table>
            </td>
           </tr>
@@ -336,131 +359,110 @@ p {text-align: center;}
 
         <table style="width: 100%;">
           <colgroup>
-            <col style=" width:10%;">
-            <col style=" width:40%;">
-            <col style=" width:10%;">
-            <col style=" width:40%;">
+            <col style=" width:25%;">
+            <col style=" width:25%;">
+            <col style=" width:25%;">
+            <col style=" width:25%;">
           </colgroup>
         <thead>
           <tr>
-            <th>Alliance Color</th>
-            <th>Starting Position</th>
-            <th>Crossed Auton Line</th>
-            <th>Autonomus Pts.</th>
+            <th>Low Rung</th>
+            <th>Mid Rung</th>
+            <th>High Rung</th>
+            <th>Traversal Rung</th>
           </tr>
         </thead>
-        <tbody>
+          <tr>
+           <td>
+            <table>
+          <colgroup>
+            <col style=" width:250px;">
+            <col style=" width:250px;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th>Fail</th>
+            <th>Success</th>
+          </tr>
+        </thead>
           <tr>
             <td>
-              <div class="question">
-              <label><input type="radio" value="Red" name='Alliance'> <span>Red</span></label>
-              <label><input type="radio" value="Blue" name='Alliance'> <span>Blue</span></label>
-            </div>
-          </td>
-              <td>
-                <div class="question">
-                  <label><input type="radio" value="Left" name='StartPos'> <span>L</span></label>
-                  <label><input type="radio" value="Left Middle" name='StartPos'> <span>LM</span></label>
-                  <label><input type="radio" value="Middle" name='StartPos'> <span>M</span></label>
-                  <label><input type="radio" value="Right Middle" name='StartPos'> <span>RM</span></label>
-                  <label><input type="radio" value="Right" name='StartPos'> <span>R</span></label>
-                </div>
-              </td>
-              <td>
-                <div class="question">
-                  <label style="color:black"><input type="radio" value="Yes" name='CrossAutonLine'> <span>Yes</span></label>
-                  <label style="color:black"><input type="radio" value="No" name='CrossAutonLine'> <span>No</span></label>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <input style='width:10%' type="number" value='0' id='AutonPts' >
-                </div>
-              </td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
+            <td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
           </tr>
-        </tbody>
+            </table>
+           </td>
+           <td>
+            <table>
+          <colgroup>
+            <col style=" width:250px;">
+            <col style=" width:250px;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th>Fail</th>
+            <th>Success</th>
+          </tr>
+        </thead>
+          <tr>
+            <td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
+            <td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
+          </tr>
+            </table>
+          </td>
+          <td>
+            <table>
+          <colgroup>
+            <col style=" width:250px;">
+            <col style=" width:250px;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th>Fail</th>
+            <th>Success</th>
+          </tr>
+        </thead>
+          <tr>
+            <td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
+            <td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
+          </tr>
+            </table>
+          </td>
+          <td>
+            <table>
+          <colgroup>
+            <col style=" width:250px;">
+            <col style=" width:250px;">
+          </colgroup>
+        <thead>
+          <tr>
+            <th>Fail</th>
+            <th>Success</th>
+          </tr>
+        </thead>
+          <tr>
+            <td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
+            <td>
+              <input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+            </td>
+          </tr>
+            </table>
+          </td>
+          </tr>
         </table>
-
-      <table style="width: 100%;">
-        <colgroup>
-          <col style=" width:4%;">
-          <col style=" width:40%;">
-          <col style=" width:16%;">
-          <col style=" width:40%;">
-        </colgroup>
-      <thead>
-        <tr>
-          <th>Cycles</th>
-          <th>Made</th>
-          <th>Height</th>
-          <th>Missed</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-            <td>
-              <div class="question">
-                <label><input type="radio" value="1" name='Made'> <span>1</span></label>
-                <label><input type="radio" value="2" name='Made'> <span>2</span></label>
-                <label><input type="radio" value="3" name='Made'> <span>3</span></label>
-                <label><input type="radio" value="4" name='Made'> <span>4</span></label>
-                <label><input type="radio" value="5" name='Made'> <span>5</span></label>
-              </div>
-            </td>
-            <td>
-              <div class="question">
-                <label style="color:black"><input type="radio" value="scored high" name='ScoreHeight'> <span>High</span></label>
-                <label style="color:black"><input type="radio" value="scored low" name='ScoreHeight'> <span>Low</span></label>
-              </div>
-            </td>
-            <td>
-              <div class="question">
-                <label><input type="radio" value="1" name='Missed'> <span>1</span></label>
-                <label><input type="radio" value="2" name='Missed'> <span>2</span></label>
-                <label><input type="radio" value="3" name='Missed'> <span>3</span></label>
-                <label><input type="radio" value="4" name='Missed'> <span>4</span></label>
-                <label><input type="radio" value="5" name='Missed'> <span>5</span></label>
-              </div>
-            </td>
-        </tr>
-      </tbody>
-      </table>
-
-          <!-- <div class="city-item">
-            <select>
-              <option value="">Country</option>
-              <option value="1">Russia</option>
-              <option value="2">Germany</option>
-              <option value="3">France</option>
-              <option value="4">Armenia</option>
-              <option value="5">USA</option>
-            </select>
-          </div> -->
-
-        <div class="question">
-          <p>Did they play defense?<span class="required">*</span></p>
-          <div class="question-answer">
-            <label><input type="radio" value="Defense Yes"  name='Defense' required/> <span>Yes</span></label>
-            <label><input type="radio" value="Defense No"   name='Defense' required/> <span>No</span></label>
-          </div>
-        </div>
-        <div class="question">
-          <p>Did they feed a team?<span class="required">*</span></p>
-          <div class="question-answer">
-            <label><input type="radio" value="FeedBrief" name='Feed'  required/> <span>Briefly</span></label>
-            <label><input type="radio" value="FeedSome" name='Feed' required/> <span>Some</span></label>
-            <label><input type="radio" value="FeedMost"  name='Feed' required/> <span>Most</span></label>
-          </div>
-        </div>
-        <div class="question">
-          <p>Endgame Success?<span class="required">*</span></p>
-          <div class="question-answer">
-            <label><input type="radio" value="EndgameYes" name='Endgame' required/> <span>Yes</span></label>
-            <label><input type="radio" value="EndgameNo" name='Endgame' required/> <span>No</span></label>
-            <label><input type="radio" value="EndgameDnA" name='Endgame' required/> <span>Did Not Attempt</span></label>
-          </div>
-        </div>
 
         <div style="width: 100%;">
             <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>

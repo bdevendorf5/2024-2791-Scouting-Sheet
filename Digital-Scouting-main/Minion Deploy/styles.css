@@ -16,7 +16,7 @@ html, body {
       font-family: Roboto, Arial, sans-serif;
       font-size: 14px;
       color: #666;
-      line-height: 22px;
+      line-height: 12px;
       }
       h1 {
       position: absolute;
@@ -33,7 +33,7 @@ html, body {
       justify-content: center;
       align-items: center;
       height: inherit;
-      padding: 20px;
+      padding: 10px;
       }
       form {
       width: 100%;

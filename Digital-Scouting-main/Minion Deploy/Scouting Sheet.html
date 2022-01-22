@@ -546,7 +546,7 @@ function makeCode () {
    var HPScore1Ele = document.getElementById("HPScore1").value;
    var HPScore2Ele = document.getElementById("HPScore2").value;
    var HPScore3Ele = document.getElementById("HPScore3").value;
-   var AutonFedEleEle = document.getElementById("Fed").value;
+   var AutonFedEle = document.getElementById("Fed").value;
    var AutonGivenEle = document.getElementById("Given").value;
    var AutonMadeLowEle = document.getElementById("MadeLow").value;
    var AutonMadeHighEle = document.getElementById("MadeHigh").value;
@@ -590,72 +590,108 @@ function makeCode () {
    var FailMidEle = document.getElementById("FailMid").value;
    var SuccessMidEle = document.getElementById("SuccessMid").value;
    var FailHighEle = document.getElementById("FailHigh").value;
+   var SuccessHighEle = document.getElementById("SuccessHigh").value;
+   var FailTravEle = document.getElementById("FailTrav").value;
+   var SuccessTravEle = document.getElementById("SuccessTrav").value;
 
 
 
 
-
-
-
-  for(i = 0; i < AllianceEle.length; i++) {
-      if(AllianceEle[i].checked)
-      var Alliance = AllianceEle[i].value;
-  }
-  for(i = 0; i < StartingPosEle.length; i++) {
-      if(StartingPosEle[i].checked)
-      var StartingPos = StartingPosEle[i].value;
-  }
-  for(i = 0; i < AutonLineEle.length; i++) {
-      if(AutonLineEle[i].checked)
-      var AutonLine = AutonLineEle[i].value;
-  }
-  for(i = 0; i < MadeEle.length; i++) {
-      if(MadeEle[i].checked)
-      var Made = MadeEle[i].value;
-  }              
-  for(i = 0; i < MissedEle.length; i++) {
-      if(MissedEle[i].checked)
-      var Missed = MissedEle[i].value;
-  }
-  for(i = 0; i < HeightEle.length; i++) {
-      if(HeightEle[i].checked)
-      var Height = HeightEle[i].value;
-  }              
-  for(i = 0; i < DefenseEle.length; i++) {
-      if(DefenseEle[i].checked)
-      var Defense = DefenseEle[i].value;
-  }              
-  for(i = 0; i < FeedEle.length; i++) {
-      if(FeedEle[i].checked)
-      var Feed = FeedEle[i].value;
-  }              
-  for(i = 0; i < EndgameEle.length; i++) {
-      if(EndgameEle[i].checked)
-      var Endgame = EndgameEle[i].value;
-  }              
+  
               
+
+
+  for(i = 0; i < StartPosEle.length; i++) {
+      if(StartPosEle[i].checked)
+      var StartingPosition= StartPosEle[i].value;
+  }           
+  for(i = 0; i < TaxiEle.length; i++) {
+      if(TaxiEle[i].checked)
+      var Taxi= TaxiEle[i].value;
+  }           
+  for(i = 0; i < HPFed1Ele.length; i++) {
+      if(TaxiEle[i].checked)
+      var HPFed1= HPFed1Ele[i].value;
+  }           
+
+
+
+
+
+
+
+
 
 
         const matchNum = document.getElementById('match#txt');
         const robotNum = document.getElementById('robot#txt');
         const name = document.getElementById('nametxt');
         const notes = document.getElementById('notestxt');
+	const defense = document.getElementById('Def#Text');
+
         
         // This variable stores all the data.
         let data =  
+
+        name.value + "," +
         matchNum.value + "," + 
         robotNum.value + "," + 
-        name.value + "," +
         Alliance + "," +
-        StartingPos + "," +
-        AutonLine + "," +
-        AutonPts + "," +
-        Made + "," +
-        Missed + "," +
-        Height + "," +
-        Defense + "," +
-        Feed + "," +
-        Endgame + "," +
+        StartingPosition + "," +
+        Taxi + "," +
+        HPFed1Ele + "," +
+        HPFed2Ele + "," +
+        HPFed3Ele + "," +
+        HPShot1Ele + "," +
+        HPShot2Ele + "," +
+        HPShot3Ele + "," +
+        HPScore1Ele + "," +
+        HPScore2Ele + "," +
+        HPScore3Ele + "," +
+	AutonFedEle + "," +
+	AutonGivenEle + "," +
+	AutonMadeLowEle + "," +
+	AutonMadeHighEle + "," +
+	AutonMissLowEle + "," +
+	AutonMissHighEle + "," +
+	MadeFenderLowEle + "," +
+	MadeFenderHighEle + "," +
+	MadeTarmacLowEle + "," +
+	MadetarmacHighEle + "," +
+	MadeLPLowEle + "," +
+	MadeLPHighEle + "," +
+	MadeOtherLowEle + "," +
+	MadeOtherHighEle + "," +
+	MissFenderLowEle + "," +
+	MissFenderHighEle + "," +
+	MissTarmacLowEle + "," +
+	MisstarmacHighEle + "," +
+	MissLPLowEle + "," +
+	MissLPHighEle + "," +
+	MissOtherLowEle + "," +
+	MissOtherHighEle + "," +
+	TODEle + "," +
+	DVEEle + "," +
+	TDEle + "," +
+	DDEEle + "," +
+	MadeLowEndEle + "," +
+	MadeHighEndEle + "," +
+	MissLowEndEle + "," +
+	MissHighEndEle + "," +
+	NoClimbEle + "," +
+	TermIntEle + "," +
+	FeedingEle + "," +
+	FoulsEle + "," +
+	DeadEle + "," +
+	EndDefEle + "," +
+	FailLowEle + "," +
+	SuccessLowEle + "," +
+	FailMidEle + "," +
+	SuccessMidEle + "," +
+	FailHighEle + "," +
+	SuccessHighEle + "," +
+	FailTravEle + "," +
+	SuccessTravEle + "," +
         notes.value;
         
       qrcode.makeCode(data);

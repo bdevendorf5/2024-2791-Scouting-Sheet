@@ -19,7 +19,7 @@ p {text-align: center;}
         </div>
         <div class="item">
           <div class="name-item">
-	    <input type="text" name="name" placeholder="Scout ID" id='nametxt'required/>
+	    <input type="text" name="name" placeholder="Your Name" id='nametxt'required/>
             <input type="text" name="match" placeholder="Match Number" id='match#txt' required/>
             <input type="text" name="robot" placeholder="Robot Number" id='robot#txt' required/>
             <select name="Alliance" id="Alliance">
@@ -151,7 +151,7 @@ p {text-align: center;}
                        <input style='width:15%' type="number" value='0' id='MissLow' Min='0'>
                      </td>
                      <td>
-                       <input style='width:15%' type="number" value='0' id='Misshigh' Min='0'>
+                       <input style='width:15%' type="number" value='0' id='MissHigh' Min='0'>
                      </td>
                    </tr>
                  </table>
@@ -517,17 +517,31 @@ p {text-align: center;}
     </div>
 </div>
 <div id="qrcode"></div>
+<div id="qrcode2"></div>
 </body>
 <script>
 
 var qrcode = new QRCode("qrcode");
+var qrcode2 = new QRCode("qrcode2");
 
 function makeCode () {
 
 
    var StartPosEle = document.getElementById("StartPos").value;
    var TaxiEle = document.getElementById("Taxi").value;
+
+   for(i = 0; i < TaxiEle.length; i++) {
+      if(TaxiEle[i].checked)
+      var Tax = TaxiEle[i].value;
+   }
+
+
+
+
    var HPFed1Ele = document.getElementById("HPFed1").value;
+
+
+   
    var HPFed2Ele = document.getElementById("HPFed2").value;
    var HPFed3Ele = document.getElementById("HPFed3").value;
    var HPShot1Ele = document.getElementById("HPShot1").value;
@@ -584,7 +598,7 @@ function makeCode () {
    var FailTravEle = document.getElementById("FailTrav").value;
    var SuccessTravEle = document.getElementById("SuccessTrav").value;
 									      
-   var AutonStartPosEle = document.getElementById("AutonStartPos").value;
+   var AutonShotPosEle = document.getElementById("AutonShotPos").value;
    var AllianceEle = document.getElementById("Alliance").value;									      
 
 
@@ -601,9 +615,9 @@ function makeCode () {
         name.value + "," +
         matchNum.value + "," + 
         robotNum.value + "," +
-	AllianceEle + "," +
+        AllianceEle + "," +
         StartPosEle + "," +
-        TaxiEle + "," +
+        Tax + "," +
         HPFed1Ele + "," +
         HPFed2Ele + "," +
         HPFed3Ele + "," +
@@ -615,12 +629,12 @@ function makeCode () {
         HPScore3Ele + "," +
 	AutonFedEle + "," +
 	AutonGivenEle + "," +
-	AutonStartPosEle + "," +
+	AutonShotPosEle + "," +
 	AutonMadeLowEle + "," +
 	AutonMadeHighEle + "," +
 	AutonMissLowEle + "," +
 	AutonMissHighEle + "," +
-	MadeFenderLowEle + "," +
+	MadeFenderLowEle + ","
 	MadeFenderHighEle + "," +
 	MadeTarmacLowEle + "," +
 	MadeTarmacHighEle + "," +
@@ -631,12 +645,20 @@ function makeCode () {
 	MissFenderLowEle + "," +
 	MissFenderHighEle + "," +
 	MissTarmacLowEle + "," +
-	MisstarmacHighEle + "," +
+	MissTarmacHighEle + "," +
 	MissLPLowEle + "," +
 	MissLPHighEle + "," +
 	MissOtherLowEle + "," +
-	MissOtherHighEle + "," +
-	TODEle + "," +
+	MissOtherHighEle;
+
+
+	
+
+
+
+    let data2 = 
+    
+  TODEle + "," +
 	DVEEle + "," +
 	TDEle + "," +
 	DDEEle + "," +
@@ -650,7 +672,6 @@ function makeCode () {
 	FoulsEle + "," +
 	DeadEle + "," +
 	EndDefEle + "," +
-        defense.value + "," +
 	FailLowEle + "," +
 	SuccessLowEle + "," +
 	FailMidEle + "," +
@@ -659,9 +680,11 @@ function makeCode () {
 	SuccessHighEle + "," +
 	FailTravEle + "," +
 	SuccessTravEle + "," +
-        notes.value;
+  defense.value + "," +
+  notes.value; 
         
       qrcode.makeCode(data);
+      qrcode2.makeCode(data2);
 
 }
 

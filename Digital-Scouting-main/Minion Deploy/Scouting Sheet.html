@@ -533,6 +533,7 @@ function makeCode () {
    for(i = 0; i < TaxiEle.length; i++) {
       if(TaxiEle[i].checked)
       var Tax = TaxiEle[i].value;
+      else var Tax = 0;
    }
 
 
@@ -540,6 +541,11 @@ function makeCode () {
 
    var HPFed1Ele = document.getElementById("HPFed1").value;
 
+   for(i = 0; i < HPFed1Ele.length; i++) {
+      if(HPFed1Ele[i].checked)
+      var HPF1 = HPFed1Ele[i].value;
+      else var HPF1 = 0;
+   }
 
    
    var HPFed2Ele = document.getElementById("HPFed2").value;
@@ -618,7 +624,7 @@ function makeCode () {
         AllianceEle + "," +
         StartPosEle + "," +
         Tax + "," +
-        HPFed1Ele + "," +
+        HPF1 + "," +
         HPFed2Ele + "," +
         HPFed3Ele + "," +
         HPShot1Ele + "," +

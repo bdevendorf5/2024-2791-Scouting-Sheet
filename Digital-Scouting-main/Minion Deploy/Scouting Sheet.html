@@ -524,6 +524,7 @@ p {text-align: center;}
 
 var qrcode = new QRCode("qrcode");
 var qrcode2 = new QRCode("qrcode2");
+var qrcode2 = new QRCode("qrcode3");
 
 function makeCode () {
 
@@ -718,7 +719,9 @@ function makeCode () {
         HPScore3Ele + "," +
 	AutonFedEle + "," +
 	AutonGivenEle + "," +
-	AutonShotPosEle + "," +
+	AutonShotPosEle;
+							  
+   let data3 = 
 	AutonMadeLowEle + "," +
 	AutonMadeHighEle + "," +
 	AutonMissLowEle + "," +
@@ -739,7 +742,6 @@ function makeCode () {
 	MissLPHighEle + "," +
 	MissOtherLowEle + "," +
 	MissOtherHighEle;
-	
 
 
 
@@ -771,6 +773,7 @@ function makeCode () {
   notes.value; 
         
       qrcode.makeCode(data);
+      qrcode2.makeCode(data3);     
       qrcode2.makeCode(data2);
 
 }

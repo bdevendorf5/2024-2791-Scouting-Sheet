@@ -80,18 +80,7 @@ p {text-align: center;}
                    <td>
                     <label><span>Taxi?</span></label><input type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                   </td>			   
-			   
 
-
-      if(Taxi.checked){
-      var Taxiiiii = "1";}
-      else{
-      var Taxiiiii = "0";}
-             
-			   
-			   
-			   
-       
                    <td>
                     <label><span># Fed to HP</span></label><input type="checkbox" id="HPFed1" name='HPFed1' value="HPFed1-Yes">
                     <input type="checkbox" id="HPFed2" name='HPFed2' value="HPFed2-Yes">
@@ -559,7 +548,18 @@ function makeCode () {
       else var HPF1 = 0;
    }
 
-   
+   			   
+
+
+      if(Taxi.checked){
+      var Taxiiiii = "1";}
+      else{
+      var Taxiiiii = "0";}
+             
+			   
+			   
+			   
+       
    var HPFed2Ele = document.getElementById("HPFed2").value;
    var HPFed3Ele = document.getElementById("HPFed3").value;
    var HPShot1Ele = document.getElementById("HPShot1").value;

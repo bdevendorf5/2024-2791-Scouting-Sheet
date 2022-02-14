@@ -20,7 +20,7 @@ while True:
 
           if new_value != mydata:
                mydata=new_value
-               f = open('scoutingdata.csv', 'a+')
+               f = open('ScoutingData2.csv', 'a+')
             if(var%3=0){
                f.write("," + mydata + "\n")
               var++

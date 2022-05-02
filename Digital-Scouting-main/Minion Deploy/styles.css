@@ -128,7 +128,7 @@ html, body {
       color: #fff;
       cursor: pointer;
       }
-      button:hover {
+      button: {
       background: #0666a3;
       }
       @media (min-width: 568px) {

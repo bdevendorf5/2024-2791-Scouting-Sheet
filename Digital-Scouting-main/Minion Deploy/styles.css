@@ -23,7 +23,7 @@
 html, body {
       min-height: 100%;
       }
-      body, div, form, input, select, p { 
+      body, div, form, input, select, number, p { 
       padding: 0;
       margin: 0;
       outline: none;
@@ -128,7 +128,7 @@ html, body {
       color: #fff;
       cursor: pointer;
       }
-      button: {
+      button: hover {
       background: #0666a3;
       }
       @media (min-width: 568px) {

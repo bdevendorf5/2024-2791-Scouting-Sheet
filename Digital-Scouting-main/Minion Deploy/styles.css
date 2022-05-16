@@ -174,7 +174,9 @@ html, body {
       .checkboxes label span {
       vertical-align: middle;
       }
-
+      input[type=number]::-webkit-inner-spin-button {
+            opacity: 1;
+          }
 
         
 

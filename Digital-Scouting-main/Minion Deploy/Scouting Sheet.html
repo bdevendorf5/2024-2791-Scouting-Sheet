@@ -510,16 +510,14 @@ p {text-align: center;}
         <div style="width: 100%;">
             <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>
         </div>
-var click = "This button has not been clicked";
         <div>
-          <input type="button" id="bt" value="Create QR Code" onclick="makeCode()" value="This button has been clicked" />
-	      var click = bt.value;
+          <input type="button" id="bt" value="Create QR Code" onclick="makeCode()" value='1' />
         </div>
-	
+	if(bt.value==1)
+      var click = document.getElementById("bt").value;
+      else var click = 0;
 	<div>
-									      <tr>
-	  document.write(click)	
-									      </tr>
+	  document.write(click);
 	</div
 									      
 									      

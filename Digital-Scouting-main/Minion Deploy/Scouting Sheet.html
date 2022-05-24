@@ -511,17 +511,15 @@ p {text-align: center;}
             <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>
         </div>
         <div>
-          <input type="button" id="bt" value="Create QR Code" onclick="makeCode()" value='1' />
+	var click = 0
+          <input type="button" id="bt" value="Create QR Code" onclick="makeCode()" onclick var click="Clicked" />
 	</div
-	if(bt.value==1){
-      var click = document.getElementById("bt").value;
-      else var click = 0;}
-<div>
-	  document.write(click);
-</div>			
+	if(var click="Clicked"){
+		  document.write(click);
+}
+		
 											    
-if(document.getElementById("bt").clicked == true){
-   alert("button was clicked");
+
 }
 									      
 									      

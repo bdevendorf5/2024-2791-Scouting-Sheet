@@ -318,31 +318,12 @@ p {text-align: center;}
 		     <img src="2023-Starting Pos 1.png" alt="SP Map" width="100%">
 	    </td>
 	    <td>
-		    		<table style="width: 100%;">
-          <colgroup>
-            <col style=" width:100%;">
-          </colgroup>
-		<tr>
-		  <td>
-			<label><span>1</span></label><input type="checkbox" id="SP1" name='SP1' value="SP1">  
-		  </td>
-		</tr>
-		<tr>
-		  <td>
-			<label><span>2</span></label><input type="checkbox" id="SP2" name='SP2' value="SP2">  
-		  </td>
-		</tr>
-		<tr>
-		  <td>
-			<label><span>3</span></label><input type="checkbox" id="SP3" name='SP3' value="SP3">  
-		  </td>
-		</tr>
-		<tr>
-		  <td>
-			<label><span>4</span></label><input type="checkbox" id="SP4" name='SP4' value="SP4">  
-		  </td>
-		</tr>
-		    </table>
+		    		<div class="question">
+					<label><span>1</span> <input type="radio" value="SP1" name='SP'> </label>
+					<label><span>2</span> <input type="radio" value="SP2" name='SP'> </label>
+					<label><span>3</span> <input type="radio" value="SP3" name='SP'> </label>
+					<label><span>4</span> <input type="radio" value="SP4" name='SP'> </label>
+					</div>
 	    </td>
             <td>
 		    		    		<table style="width: 100%;">
@@ -388,13 +369,13 @@ p {text-align: center;}
           </colgroup>
 		<tr>
 	        <td>
-			<label><span>Links:</span> </label><input style='width:10%' type="number" value='0' id='Links' Min='0'>
+			<label><span><b>Links:</b></span> </label><input style='width:10%' type="number" value='0' id='Links' Min='0'>
 		</td>
 		<td>
-			<label><span>Cycles:</span> </label><input style='width:10%' type="number" value='0' id='Links' Min='0'>
+			<label><span><b>Cycles:</b></span> </label><input style='width:10%' type="number" value='0' id='Cycles' Min='0'>
 		</td>
 		<td>
-			<label><span>Fed (To Others):</span> </label><input style='width:10%' type="number" value='0' id='Links' Min='0'>
+			<label><span><b>Fed (To Others):</b></span> </label><input style='width:10%' type="number" value='0' id='Fed' Min='0'>
 		</td>
 		</tr>
 		<tr>

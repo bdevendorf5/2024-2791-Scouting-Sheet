@@ -154,7 +154,7 @@ html, body {
       }
 
       table {
-            border: 0px solid black;
+            border: 1px solid black;
             margin: 0px;
             padding: 0px;
           }
@@ -181,7 +181,7 @@ html, body {
       .checkboxes label span {
       vertical-align: middle;
       }
-      checkbox-wrapper input {
+      .checkbox-wrapper input {
       width: 150px;
       padding: 10px;
       border: none;

@@ -155,11 +155,15 @@ html, body {
 
       table {
             border: 1px solid black;
+            margin: 0px;
+            padding: 0px;
           }
       
       td, tr {
             text-align:center;
-            border: 1px white;
+            border: 0px white;
+            margin: 0px;
+            padding: 0px;
       }
 
       .checkboxes label {

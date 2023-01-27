@@ -161,7 +161,7 @@ html, body {
       
       td, tr {
             text-align:center;
-            border: 0px white;
+            border: -1px white;
             margin: 0px;
             padding: 0px;
       }

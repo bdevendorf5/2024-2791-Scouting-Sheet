@@ -170,9 +170,22 @@ html, body {
           }
       .checkboxes input {
       vertical-align: middle;
+      width: 500px;
+      height: 500px;
+      padding: 100px;
       }
       .checkboxes label span {
       vertical-align: middle;
+      }
+      checkbox-wrapper input {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
       }
       input[type=number]::-webkit-inner-spin-button {
             opacity: 1;

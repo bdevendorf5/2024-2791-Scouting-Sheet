@@ -155,16 +155,14 @@ html, body {
 
       table {
             border: 1px solid black;
-            margin: 0px;
-            padding: 0px;
+            padding: 5px;
             border-collapse: collapse;
           }
       
-      td, tr {
+      td, tr, th {
             text-align:center;
-            border: 0px white;
-            margin: 0px;
-            padding: 0px;
+            border: 0px solid white;
+            padding: 5px;
             border-collapse: collapse;
       }
 

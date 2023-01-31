@@ -872,19 +872,19 @@ function makeCode () {
       var T27Ele = "0";}
 											      
       if(Mobility.checked){
-      var Mobility = "1";}
+      var MobilityEle = "1";}
       else{
-      var Mobility = "0";}
+      var MobilityEle = "0";}
 									      
       if(Coop.checked){
-      var Coop = "1";}
+      var CoopEle = "1";}
       else{
-      var Coop = "0";}
+      var CoopEle = "0";}
 												      
       if(Helped.checked){
-      var Helped = "1";}
+      var HelpedEle = "1";}
       else{
-      var Helped = "0";}						      
+      var HelpedEle = "0";}						      
       
    var SPEle = document.getElementsByName('SP');
    var AclimbEle = document.getElementsByName('Aclimb');
@@ -927,6 +927,8 @@ function makeCode () {
         A7Ele + "," +
          A8Ele+ "," +
          A9Ele+ "," +
+	    MobilityEle+ ","+
+	
 	    SPEle+ "," +
 	    AclimbEle+ "," +
         T1Ele + "," +
@@ -963,18 +965,22 @@ function makeCode () {
 	LinksEle + "," +
 	CyclesEle + "," +
 	FedEle + "," +
-	OpinionEle;
+	CoopEle;
+	  
 
     let data3 = 
 	    
-	    ClimbEle+ "," +
+	    ClimbEle+ "," +  
+	    HelpedEle+","+
 	   DeadEle+ "," +
 	FoulsEle+ "," +
 	DefEffEle+ "," +
 	DfdEffEle+ "," +
 	DefTimeEle+ "," +
 	DfdTimeEle+ "," +
+	OpinionEle+ "," +
 	notes.value;
+	
 
     
 

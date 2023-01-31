@@ -880,47 +880,26 @@ function makeCode () {
       var Coop = "1";}
       else{
       var Coop = "0";}
-									      
+												      
+      if(Helped.checked){
+      var Helped = "1";}
+      else{
+      var Helped = "0";}						      
       
-   var AutonFedEle = document.getElementById("Fed").value;
-   var AutonGivenEle = document.getElementById("Given").value;
-   var AutonMadeLowEle = document.getElementById("MadeLow").value;
-   var AutonMadeHighEle = document.getElementById("MadeHigh").value;
-   var AutonMissLowEle = document.getElementById("MissLow").value;
-   var AutonMissHighEle = document.getElementById("MissHigh").value;
-
-   var MadeFenderLowEle = document.getElementById("MadeFenderLow").value;
-   var MadeFenderHighEle = document.getElementById("MadeFenderHigh").value;
-   var MadeTarmacLowEle = document.getElementById("MadeTarmacLow").value;
-   var MadeTarmacHighEle = document.getElementById("MadeTarmacHigh").value;
-   var MadeLPLowEle = document.getElementById("MadeLPLow").value;
-   var MadeLPHighEle = document.getElementById("MadeLPHigh").value;
-   var MadeOtherLowEle = document.getElementById("MadeOtherLow").value;
-   var MadeOtherHighEle = document.getElementById("MadeOtherHigh").value;
-   var MissFenderLowEle = document.getElementById("MissFenderLow").value;
-   var MissFenderHighEle = document.getElementById("MissFenderHigh").value;
-   var MissTarmacLowEle = document.getElementById("MissTarmacLow").value;
-   var MissTarmacHighEle = document.getElementById("MissTarmacHigh").value;
-   var MissLPLowEle = document.getElementById("MissLPLow").value;
-   var MissLPHighEle = document.getElementById("MissLPHigh").value;
-   var MissOtherLowEle = document.getElementById("MissOtherLow").value;
-   var MissOtherHighEle = document.getElementById("MissOtherHigh").value;
-
-   var TODEle = document.getElementById("TOD").value;
-   var DVEEle = document.getElementById("DVE").value;
-   var TDEle = document.getElementById("TD").value;
-   var DDEEle = document.getElementById("DDE").value;
-   var MadeLowEndEle = document.getElementById("MadeLowEnd").value;
-   var MadeHighEndEle = document.getElementById("MadeHighEnd").value;
-   var MissLowEndEle = document.getElementById("MissLowEnd").value;
-   var MissHighEndEle = document.getElementById("MissHighEnd").value;
-   var TermIntEle = document.getElementById("TermInt").value;
-   var FeedingEle = document.getElementById("Feeding").value;
-   var FoulsEle = document.getElementById("Fouls").value;
-   var DeadEle = document.getElementById("Dead").value;
-   var EndDefEle = document.getElementById("EndDef").value;
-									      
-   var AutonShotPosEle = document.getElementById("AutonShotPos").value;
+   var SPEle = document.getElementByName("SP").value;
+   var AclimbEle = document.getElementByName("Aclimb").value;
+   var LinksEle = document.getElementById("Links").value;
+   var CyclesEle = document.getElementById("Cycles").value;
+   var FedEle = document.getElementById("Fed").value;
+   var OpinionEle = document.getElementByName("Opinion").value;
+	
+   var ClimbEle = document.getElementByName("Climb").value;
+   var DeadEle = document.getElementByName("Dead").value;
+   var FoulsEle = document.getElementByName("Fouls").value;
+   var DefEffEle = document.getElementByName("DefEff").value;
+   var DfdEffEle = document.getElementByName("DfdEff").value;
+   var DefTimeEle = document.getElementByName("DefTime").value;
+   var DfdTimeEle = document.getElementByName("DfdTime").value;
    var AllianceEle = document.getElementById("Alliance").value;									      
 
 
@@ -928,7 +907,7 @@ function makeCode () {
         const robotNum = document.getElementById('robot#txt');
         const name = document.getElementById('nametxt');
         const notes = document.getElementById('notes#txt');
-	const defense = document.getElementById('Def#Text');
+	
 
         
         // This variable stores all the data.

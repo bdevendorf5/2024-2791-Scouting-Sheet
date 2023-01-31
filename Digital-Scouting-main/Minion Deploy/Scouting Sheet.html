@@ -688,30 +688,6 @@ var qrcode3 = new QRCode("qrcode3");
 
 function makeCode () {
 
-
-   var StartPosEle = document.getElementById("StartPos").value;
-   var TaxiEle = document.getElementById("Taxi").value;
-
-   for(i = 0; i < TaxiEle.length; i++) {
-      if(TaxiEle[i].checked)
-      var Tax = TaxiEle[i].value;
-      else var Tax = 0;
-   }
-
-
-
-
-   var HPFed1Ele = document.getElementById("HPFed1").value;
-
-   for(i = 0; i < HPFed1Ele.length; i++) {
-      if(HPFed1Ele[i].checked)
-      var HPF1 = HPFed1Ele[i].value;
-      else var HPF1 = 0;
-   }
-
-   			   
-
-
       if(Taxi.checked){
       var Taxiiiii = "1";}
       else{

@@ -948,6 +948,50 @@
         var DfdTimeEle = document.getElementsByName('DfdTime');
         var AllianceEle = document.getElementById("Alliance").value;
 
+         for(i = 0; i < SPEle.length; i++) {
+      if(SPEle[i].checked)
+      var SPE = SPEle[i].value;
+  } 
+         for(i = 0; i < AclimbEle.length; i++) {
+      if(AclimbEle[i].checked)
+      var AclimbE = AclimbEle[i].value;
+  }
+         for(i = 0; i < OpinionE.length; i++) {
+      if(OpinionE[i].checked)
+      var OpE = OpinionE[i].value;
+  }
+         for(i = 0; i < ClimbEle.length; i++) {
+      if(ClimbEle[i].checked)
+      var ClimbE = ClimbEle[i].value;
+  }
+         for(i = 0; i < DeadEle.length; i++) {
+      if(DeadEle[i].checked)
+      var DeadE = DeadEle[i].value;
+  }
+         for(i = 0; i < FoulsEle.length; i++) {
+      if(FoulsEle[i].checked)
+      var FoulsE = FoulsEle[i].value;
+  } 
+         for(i = 0; i < DefEffEle.length; i++) {
+      if(DefEffEle[i].checked)
+      var DefEffE = DefEffEle[i].value;
+  }
+         for(i = 0; i < DfdEffEle.length; i++) {
+      if(DfdEffEle[i].checked)
+      var DfdEffE = DfdEffEle[i].value;
+  }
+         for(i = 0; i < DefTimeEle.length; i++) {
+      if(DefTimeEle[i].checked)
+      var DefTimeE = DefTimeEle[i].value;
+  }
+         for(i = 0; i < DfdTimeEle.length; i++) {
+      if(DfdTimeEle[i].checked)
+      var DfdTimeE = DfdTimeEle[i].value;
+  }
+        
+        
+        
+        
 
         const matchNum = document.getElementById('match#txt');
         const robotNum = document.getElementById('robot#txt');
@@ -973,10 +1017,10 @@
             A8Ele + "," +
             A9Ele + "," +
             MobilityEle + "," +
-            SPEle + "," +
-            AclimbEle + "," +
-            OpinionE + "," +
-            ClimbEle + "," +
+            SPE + "," +
+            AclimbE + "," +
+            OpE + "," +
+            ClimbE + "," +
             CyclesEle + "," +
             T1Ele + "," +
             T2Ele + "," +
@@ -1015,12 +1059,12 @@
             FedEle + "," +
             CoopEle + "," +
             HelpedEle + "," +
-            DeadEle + "," +
-            FoulsEle + "," +
-            DefEffEle + "," +
-            DfdEffEle + "," +
-            DefTimeEle + "," +
-            DfdTimeEle + "," +
+            DeadE + "," +
+            FoulsE + "," +
+            DefEffE + "," +
+            DfdEffE + "," +
+            DefTimeE + "," +
+            DfdTimeE + "," +
             notes.value;
 
 

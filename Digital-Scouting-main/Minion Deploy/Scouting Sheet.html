@@ -1,1096 +1,144 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>FRC 2791 Scouting Sheet</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="qrcode.js"></script>
-    <style>
-        p {
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>Document</title>
 </head>
-
+  <style>
+    .top
+{
+  margin: 10px;
+}
+.auto, .teleop, .endgame, notes
+{
+  border: 1px solid black;
+  padding: 8px;
+}
+.main
+{
+  margin: 10px;
+}
+  </style>
 <body>
-    <div class="testbox">
-        <form action="/">
-            <div class="banner">
-                <h1>Team 2791 Digital Scouting Sheet 2023</h1>
-            </div>
-            <div class="item">
-                <div class="name-item">
-                    <input type="text" name="name" placeholder="Your Name" id='nametxt' required/>
-                    <input type="text" name="match" placeholder="Match Number" id='match#txt' required/>
-                    <input type="text" name="robot" placeholder="Robot Number" id='robot#txt' required/>
-                    <select name="Alliance" id="Alliance">
-              <option value="Blue">Blue</option>>
-              <option value="Red">Red</option>
-           </select>
-
-                </div>
-            </div>
-
-
-            <table style="width: 100%;">
-                <colgroup>
-                    <col style=" width:45%;">
-                    <col style=" width:55%;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>AUTO</th>
-                        <th>TELEOP</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>
-                        <table style="width: 100%;">
-                            <colgroup>
-                                <col style=" width:33%;">
-                                <col style=" width:34%;">
-                                <col style=" width:33%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Auto Scoring Locations</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td>
-                                    <input class="rounded" type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
-                                </td>
-                                <td>
-                                    <input type="checkbox" id="Au2" name='A2' value="A2-Yes">
-                                </td>
-                                <td>
-                                    <input class="rounded" type="checkbox" id="Au3" name='A3' value="A3-Yes">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input class="rounded" type="checkbox" id="Au4" name='A4' value="A4-Yes">
-                                </td>
-                                <td>
-                                    <input type="checkbox" id="Au5" name='A5' value="A5-Yes">
-                                </td>
-                                <td>
-                                    <input class="rounded" type="checkbox" id="Au6" name='A6' value="A6-Yes">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" id="Au7" name='A7' value="A7-Yes">
-                                </td>
-                                <td>
-                                    <input type="checkbox" id="Au8" name='A8' value="A8-Yes">
-                                </td>
-                                <td>
-                                    <input type="checkbox" id="Au9" name='A9' value="A9-Yes">
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table style="width: 100%;">
-                            <colgroup>
-                                <col style=" width:10%;">
-                                <col style=" width:30%;">
-                                <col style=" width:30%;">
-                                <col style=" width:30%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Loading Station Side</th>
-                                    <th>Middle</th>
-                                    <th>Edge of Field</th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td>
-                                    <p><b>High</b></p>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te1" name='T1' value="T1-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te2" name='T2' value="T2-Yes">
-                                            </td>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te3" name='T3' value="T3-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te4" name='T4' value="T4-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te5" name='T5' value="T5-Yes">
-                                            </td>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te6" name='T6' value="T6-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te7" name='T7' value="T7-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te8" name='T8' value="T8-Yes">
-                                            </td>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te9" name='T9' value="T9-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p><b>Mid</b></p>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te10" name='T10' value="T10-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te11" name='T11' value="T11-Yes">
-                                            </td>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te12" name='T12' value="T12-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te13" name='T13' value="T13-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te14" name='T14' value="T14-Yes">
-                                            </td>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te15" name='T15' value="T15-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te16" name='T16' value="T16-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te17" name='T17' value="T17-Yes">
-                                            </td>
-                                            <td>
-                                                <input class="rounded" type="checkbox" id="Te18" name='T18' value="T18-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p><b>Low</b></p>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox" id="Te19" name='T19' value="T19-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te20" name='T20' value="T20-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te21" name='T21' value="T21-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox" id="Te22" name='T22' value="T22-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te23" name='T23' value="T23-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te24" name='T24' value="T24-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:34%;">
-                                            <col style=" width:33%;">
-                                        </colgroup>
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox" id="Te25" name='T25' value="T25-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te26" name='T26' value="T26-Yes">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Te27" name='T27' value="T27-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table style="width: 100%;">
-                            <colgroup>
-                                <col style=" width:90%;">
-                                <col style=" width:10%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>Starting Position</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="2023-Starting Pos 1.png" alt="SP Map" width="100%">
-                                    </td>
-                                    <td>
-                                        <div class="question">
-                                            <label><span>1</span> <input type="radio" value="1" name='SP'> </label>
-                                            <label><span>2</span> <input type="radio" value="2" name='SP'> </label>
-                                            <label><span>3</span> <input type="radio" value="3" name='SP'> </label>
-                                            <label><span>4</span> <input type="radio" value="4" name='SP'> </label>
-                                        </div>
-                                    </td>
-                                </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table style="width: 100%;">
-                            <colgroup>
-                                <col style=" width:33%;">
-                                <col style=" width:34%;">
-                                <col style=" width:33%;">
-                            </colgroup>
-                            <tr>
-                                <td>
-                                    <label><span><b>Links:</b></span> </label><input style='width:10%' type="number" value='0' id='Links' Min='0'>
-                                </td>
-                                <td>
-                                    <label><span><b>Cycles:</b></span> </label><input style='width:10%' type="number" value='0' id='Cycles' Min='0'>
-                                </td>
-                                <td>
-                                    <label><span><b>Fed (To Others):</b></span> </label><input style='width:10%' type="number" value='0' id='Fed' Min='0'>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan=3>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:33%;">
-                                            <col style=" width:67%;">
-                                        </colgroup>
-                                        <tr>
-                                            <th>Coopertition Bonus?</th>
-                                            <th>Opinion</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox" id="Coop" name='Coop' value="Coop-Yes">
-                                            </td>
-                                            <td>
-                                                <div class="question">
-                                                    <label><span>1</span> <input type="radio" value="1" name='Opinion'> </label>
-                                                    <label><span>2</span> <input type="radio" value="2" name='Opinion'> </label>
-                                                    <label><span>3</span> <input type="radio" value="3" name='Opinion'> </label>
-                                                    <label><span>4</span> <input type="radio" value="4" name='Opinion'> </label>
-                                                    <label><span>5</span> <input type="radio" value="5" name='Opinion'> </label>
-                                                    <label><span>6</span> <input type="radio" value="6" name='Opinion'> </label>
-                                                    <label><span>7</span> <input type="radio" value="7" name='Opinion'> </label>
-                                                    <label><span>8</span> <input type="radio" value="8" name='Opinion'> </label>
-                                                    <label><span>9</span> <input type="radio" value="9" name='Opinion'> </label>
-                                                    <label><span>10</span> <input type="radio" value="10" name='Opinion'> </label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-
-
-                                            <td colspan="2">
-                                                <table style="width: 100%;">
-                                                    <colgroup>
-                                                        <col style=" width:70%;">
-                                                        <col style=" width:30%;">
-                                                    </colgroup>
-                                                    <tr>
-                                                        <td>
-                                                            <p><b>Endgame</b></p>
-                                                        </td>
-                                                        <td>
-                                                            <p><b>Helped</b></p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="question">
-                                                                <label><span>Park</span> <input type="radio" value="N" name='Climb'> </label>
-                                                                <label><span>Docked</span> <input type="radio" value="D" name='Climb'> </label>
-                                                                <label><span>Fail</span> <input type="radio" value="F" name='Climb'> </label>
-                                                                <label><span>Engaged</span> <input type="radio" value="E" name='Climb'> </label>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <input type="checkbox" id="Helped" name='Helped' value="Helped-Yes">
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-
-
-
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table style="width: 100%;">
-                            <colgroup>
-                                <col style=" width:100%;">
-                            </colgroup>
-                            <tr>
-                                <td>
-                                    <p><b>Auto Climb</b></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:20%;">
-                                            <col style=" width:20%;">
-                                            <col style=" width:20%;">
-                                            <col style=" width:20%;">
-                                            <col style=" width:20%;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>None</th>
-                                                <th>Fail</th>
-                                                <th>Docked</th>
-                                                <th>Engaged</th>
-                                                <th>Mobility</th>
-                                            </tr>
-                                        </thead>
-                                        <tr>
-                                            <td>
-                                                <input type="radio" value="N" name='Aclimb'>
-                                            </td>
-                                            <td>
-                                                <input type="radio" value="F" name='Aclimb'>
-                                            </td>
-                                            <td>
-                                                <input type="radio" value="D" name='Aclimb'>
-                                            </td>
-                                            <td>
-                                                <input type="radio" value="E" name='Aclimb'>
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Mobility" name='Mobility' value="Mobility-Yes">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <table style="width: 100%;">
-                                        <colgroup>
-                                            <col style=" width:50%;">
-                                            <col style=" width:50%;">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>Dead</th>
-                                                <th>Fouls</th>
-                                            </tr>
-                                        </thead>
-                                        <tr>
-                                            <td>
-                                                <div class="question">
-                                                    <label><span>N/A</span> <input type="radio" value="N" name='Dead'> </label>
-                                                    <label><span>Briefly</span> <input type="radio" value="B" name='Dead'> </label>
-                                                    <label><span>Some</span> <input type="radio" value="S" name='Dead'> </label>
-                                                    <label><span>Most</span> <input type="radio" value="M" name='Dead'> </label>
-                                                    <label><span>All</span> <input type="radio" value="A" name='Dead'> </label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="question">
-                                                    <label><span>0</span> <input type="radio" value="0" name='Fouls'> </label>
-                                                    <label><span>1</span> <input type="radio" value="1" name='Fouls'> </label>
-                                                    <label><span>2</span> <input type="radio" value="2" name='Fouls'> </label>
-                                                    <label><span>3+</span> <input type="radio" value="3" name='Fouls'> </label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table style="width: 100%;">
-                            <colgroup>
-                                <col style=" width:16%;">
-                                <col style=" width:17%;">
-                                <col style=" width:17%;">
-                                <col style=" width:16%;">
-                                <col style=" width:17%;">
-                                <col style=" width:17%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Defense Efficiency</th>
-                                    <th>Defended Efficiency</th>
-                                    <th></th>
-                                    <th>Defense Time</th>
-                                    <th>Defended Time</th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td>
-                                    <p>None
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="0" name='DefEff'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="0" name='DfdEff'></label>
-                                </td>
-                                <td>
-                                    <p>None
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="0" name='DefTime'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="0" name='DfdTime'></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Minimal
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="1" name='DefEff'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="1" name='DfdEff'></label>
-                                </td>
-                                <td>
-                                    <p>Minimal
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="1" name='DefTime'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="1" name='DfdTime'></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Ineffective
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="2" name='DefEff'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="2" name='DfdEff'></label>
-                                </td>
-                                <td>
-                                    <p>Occasionally
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="2" name='DefTime'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="2" name='DfdTime'></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Average
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="3" name='DefEff'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="3" name='DfdEff'></label>
-                                </td>
-                                <td>
-                                    <p>Some
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="3" name='DefTime'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="3" name='DfdTime'></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Effective
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="4" name='DefEff'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="4" name='DfdEff'></label>
-                                </td>
-                                <td>
-                                    <p>Most
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="4" name='DefTime'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="4" name='DfdTime'></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Very Effective
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="5" name='DefEff'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="5" name='DfdEff'></label>
-                                </td>
-                                <td>
-                                    <p>All
-                                        <p>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="e5" name='DefTime'></label>
-                                </td>
-                                <td>
-                                    <label><input type="radio" value="5" name='DfdTime'></label>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-
-            <div style="width: 100%;">
-                <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>
-            </div>
-            <div>
-                var click = 0
-                <input type="button" id="bt" value="Create QR Code" onclick="makeCode()" onclick var click="Clicked" />
-            </div if(var click="Clicked" ){ document.write(click); } } </form>
+  <div class="top">
+    <label for="name">Name: </label>
+    <input type="text" id="name" class="form-control-inline">
+    <label for="match">Match number: </label>
+    <input type="text" id="match" class="form-control-inline">
+    <label for="robotnum">Robot Number: </label>
+    <input type="text" id="robotnum" class="form-control-inline">
+    <label for="color">Alliance color: </label>    
+    <select id="color">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+    </select>
+  </div>
+  <div class="main">
+    <div class="auto">
+      <h2>AUTO</h2>
+      <label for="mobility">Mobility: </label>
+      <input type="checkbox" id="mobility">
+      <label for="start">Starting position: </label>
+      <select id="start">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+     <label for="auto-amp">Amp's scored: </label>
+      <select id="auto-amp">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+      </select>
+      <label for="auto-speaker">Speaker scored: </label>
+      <select id="auto-speaker">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+      </select>
     </div>
+    <div class="teleop">
+      <h2>TELEOP</h2>
+      <label for="speaker">Speaker scored: </label>
+      <select id="speaker">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12+">12+</option>
+      </select>
+      <label for="amp">Amp scored: </label>
+      <select id="amp">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12+">12+</option>
+      </select>
+      <label>Amp scored: </label>
+      <label>(Scouting Allaince) </label>
+      <input id="scouting-alliance" type="checkbox">
+      <label>(Opposing Allaince) </label>
+      <input id="opposing-alliance" type="checkbox">
+      <label for="amp-total">Total Amplification: </label>
+      <select id="amp-total">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6+">6+</option>
+      </select>
     </div>
-    <div id="qrcode"> </div>
-    <hr></hr>
-    <p>. .</p>
-    <div id="qrcode2"> </div>
-
+    <div class="endgame">
+      <h2>ENDGAME</h2>
+      <label>Park</label>
+      <input id="park" type="radio">
+      <label>Climb</label>
+      <input id="climb" type="radio">
+      <label>Climb + Harmony</label>
+      <input id="c+h" type="radio">
+      <label>Spotlight</label>
+      <select id="spotlight">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <label>Trap</label>
+      <select id="spotlight">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <div class="notes">
+      <h3>NOTES</h3>
+      <textarea class="w-100" placeholder="Notes about the match" id="notes" cols="100" rows="3"></textarea>
+    </div>
+  </div>
 </body>
-<script>
-    var qrcode = new QRCode("qrcode");
-    var qrcode2 = new QRCode("qrcode2");
-
-
-    function makeCode() {
-        if (Taxi.checked) {
-            var A1Ele = "1";
-        } else {
-            var A1Ele = "0";
-        }
-
-
-
-        if (Au2.checked) {
-            var A2Ele = "1";
-        } else {
-            var A2Ele = "0";
-        }
-
-        if (Au3.checked) {
-            var A3Ele = "1";
-        } else {
-            var A3Ele = "0";
-        }
-
-        if (Au4.checked) {
-            var A4Ele = "1";
-        } else {
-            var A4Ele = "0";
-        }
-
-        if (Au5.checked) {
-            var A5Ele = "1";
-        } else {
-            var A5Ele = "0";
-        }
-
-        if (Au6.checked) {
-            var A6Ele = "1";
-        } else {
-            var A6Ele = "0";
-        }
-
-        if (Au7.checked) {
-            var A7Ele = "1";
-        } else {
-            var A7Ele = "0";
-        }
-
-        if (Au8.checked) {
-            var A8Ele = "1";
-        } else {
-            var A8Ele = "0";
-        }
-
-        if (Au9.checked) {
-            var A9Ele = "1";
-        } else {
-            var A9Ele = "0";
-        }
-
-        if (Te1.checked) {
-            var T1Ele = "1";
-        } else {
-            var T1Ele = "0";
-        }
-
-        if (Te2.checked) {
-            var T2Ele = "1";
-        } else {
-            var T2Ele = "0";
-        }
-
-        if (Te3.checked) {
-            var T3Ele = "1";
-        } else {
-            var T3Ele = "0";
-        }
-
-        if (Te4.checked) {
-            var T4Ele = "1";
-        } else {
-            var T4Ele = "0";
-        }
-
-        if (Te5.checked) {
-            var T5Ele = "1";
-        } else {
-            var T5Ele = "0";
-        }
-
-        if (Te6.checked) {
-            var T6Ele = "1";
-        } else {
-            var T6Ele = "0";
-        }
-
-        if (Te7.checked) {
-            var T7Ele = "1";
-        } else {
-            var T7Ele = "0";
-        }
-
-        if (Te8.checked) {
-            var T8Ele = "1";
-        } else {
-            var T8Ele = "0";
-        }
-
-        if (Te9.checked) {
-            var T9Ele = "1";
-        } else {
-            var T9Ele = "0";
-        }
-
-        if (Te10.checked) {
-            var T10Ele = "1";
-        } else {
-            var T10Ele = "0";
-        }
-
-
-        if (Te11.checked) {
-            var T11Ele = "1";
-        } else {
-            var T11Ele = "0";
-        }
-
-        if (Te12.checked) {
-            var T12Ele = "1";
-        } else {
-            var T12Ele = "0";
-        }
-
-        if (Te13.checked) {
-            var T13Ele = "1";
-        } else {
-            var T13Ele = "0";
-        }
-
-        if (Te14.checked) {
-            var T14Ele = "1";
-        } else {
-            var T14Ele = "0";
-        }
-
-        if (Te15.checked) {
-            var T15Ele = "1";
-        } else {
-            var T15Ele = "0";
-        }
-
-        if (Te16.checked) {
-            var T16Ele = "1";
-        } else {
-            var T16Ele = "0";
-        }
-
-        if (Te17.checked) {
-            var T17Ele = "1";
-        } else {
-            var T17Ele = "0";
-        }
-
-        if (Te18.checked) {
-            var T18Ele = "1";
-        } else {
-            var T18Ele = "0";
-        }
-
-        if (Te19.checked) {
-            var T19Ele = "1";
-        } else {
-            var T19Ele = "0";
-        }
-
-        if (Te20.checked) {
-            var T20Ele = "1";
-        } else {
-            var T20Ele = "0";
-        }
-
-        if (Te21.checked) {
-            var T21Ele = "1";
-        } else {
-            var T21Ele = "0";
-        }
-
-        if (Te22.checked) {
-            var T22Ele = "1";
-        } else {
-            var T22Ele = "0";
-        }
-
-        if (Te23.checked) {
-            var T23Ele = "1";
-        } else {
-            var T23Ele = "0";
-        }
-
-        if (Te24.checked) {
-            var T24Ele = "1";
-        } else {
-            var T24Ele = "0";
-        }
-
-
-        if (Te25.checked) {
-            var T25Ele = "1";
-        } else {
-            var T25Ele = "0";
-        }
-
-        if (Te26.checked) {
-            var T26Ele = "1";
-        } else {
-            var T26Ele = "0";
-        }
-
-        if (Te27.checked) {
-            var T27Ele = "1";
-        } else {
-            var T27Ele = "0";
-        }
-
-        if (Mobility.checked) {
-            var MobilityEle = "1";
-        } else {
-            var MobilityEle = "0";
-        }
-
-        if (Coop.checked) {
-            var CoopEle = "1";
-        } else {
-            var CoopEle = "0";
-        }
-
-        if (Helped.checked) {
-            var HelpedEle = "1";
-        } else {
-            var HelpedEle = "0";
-        }
-
-        var SPEle = document.getElementsByName('SP');
-        var AclimbEle = document.getElementsByName('Aclimb');
-        var LinksEle = document.getElementById("Links").value;
-        var CyclesEle = document.getElementById("Cycles").value;
-        var FedEle = document.getElementById("Fed").value;
-        var OpinionE = document.getElementsByName('Opinion');
-
-        var ClimbEle = document.getElementsByName('Climb');
-        var DeadEle = document.getElementsByName('Dead');
-        var FoulsEle = document.getElementsByName('Fouls');
-        var DefEffEle = document.getElementsByName('DefEff');
-        var DfdEffEle = document.getElementsByName('DfdEff');
-        var DefTimeEle = document.getElementsByName('DefTime');
-        var DfdTimeEle = document.getElementsByName('DfdTime');
-        var AllianceEle = document.getElementById("Alliance").value;
-
-         for(i = 0; i < SPEle.length; i++) {
-      if(SPEle[i].checked)
-      var SPE = SPEle[i].value;
-  } 
-         for(i = 0; i < AclimbEle.length; i++) {
-      if(AclimbEle[i].checked)
-      var AclimbE = AclimbEle[i].value;
-  }
-         for(i = 0; i < OpinionE.length; i++) {
-      if(OpinionE[i].checked)
-      var OpE = OpinionE[i].value;
-  }
-         for(i = 0; i < ClimbEle.length; i++) {
-      if(ClimbEle[i].checked)
-      var ClimbE = ClimbEle[i].value;
-  }
-         for(i = 0; i < DeadEle.length; i++) {
-      if(DeadEle[i].checked)
-      var DeadE = DeadEle[i].value;
-  }
-         for(i = 0; i < FoulsEle.length; i++) {
-      if(FoulsEle[i].checked)
-      var FoulsE = FoulsEle[i].value;
-  } 
-         for(i = 0; i < DefEffEle.length; i++) {
-      if(DefEffEle[i].checked)
-      var DefEffE = DefEffEle[i].value;
-  }
-         for(i = 0; i < DfdEffEle.length; i++) {
-      if(DfdEffEle[i].checked)
-      var DfdEffE = DfdEffEle[i].value;
-  }
-         for(i = 0; i < DefTimeEle.length; i++) {
-      if(DefTimeEle[i].checked)
-      var DefTimeE = DefTimeEle[i].value;
-  }
-         for(i = 0; i < DfdTimeEle.length; i++) {
-      if(DfdTimeEle[i].checked)
-      var DfdTimeE = DfdTimeEle[i].value;
-  }
-        
-        
-        
-        
-
-        const matchNum = document.getElementById('match#txt');
-        const robotNum = document.getElementById('robot#txt');
-        const name = document.getElementById('nametxt');
-        const notes = document.getElementById('notes#txt');
-
-
-
-        // This variable stores all the data.
-        let data =
-
-            name.value + "," +
-            matchNum.value + "," +
-            robotNum.value + "," +
-            AllianceEle + "," +
-            A1Ele + "," +
-            A2Ele + "," +
-            A3Ele + "," +
-            A4Ele + "," +
-            A5Ele + "," +
-            A6Ele + "," +
-            A7Ele + "," +
-            A8Ele + "," +
-            A9Ele + "," +
-            MobilityEle + "," +
-            SPE + "," +
-            AclimbE + "," +
-            OpE + "," +
-            ClimbE + "," +
-            CyclesEle + "," +
-            T1Ele + "," +
-            T2Ele + "," +
-            T3Ele + "," +
-            T4Ele + "," +
-            T5Ele + "," +
-            T6Ele + "," +
-            T7Ele + "," +
-            T8Ele + "," +
-            T9Ele + "," +
-            T10Ele + "," +
-            T11Ele + "," +
-            T12Ele + "," +
-            T13Ele + "," +
-            T14Ele + "," +
-            T15Ele + "," +
-            T16Ele + "," +
-            T17Ele;
-
-
-
-        let data2 =
-
-
-            T18Ele + "," +
-            T19Ele + "," +
-            T20Ele + "," +
-            T21Ele + "," +
-            T22Ele + "," +
-            T23Ele + "," +
-            T24Ele + "," +
-            T25Ele + "," +
-            T26Ele + "," +
-            T27Ele + "," +
-            LinksEle + "," +
-            FedEle + "," +
-            CoopEle + "," +
-            HelpedEle + "," +
-            DeadE + "," +
-            FoulsE + "," +
-            DefEffE + "," +
-            DfdEffE + "," +
-            DefTimeE + "," +
-            DfdTimeE + "," +
-            notes.value;
-
-
-
-
-
-        qrcode.makeCode(data);
-        qrcode2.makeCode(data2);
-
-
-    }
-
-    makeCode();
-
-    $("#text").
-    on("blur", function() {
-        makeCode();
-    }).
-    on("keydown", function(e) {
-        if (e.keyCode == 13) {
-            makeCode();
-        }
-    });
-</script>
-
-
 </html>
-
-

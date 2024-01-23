@@ -25,7 +25,7 @@
 </style>
 <body>
   <div class="top">
-    <label for="name">Name: </label>
+    <label for="name">Initals: </label>
     <input type="text" id="name" class="form-control-inline">
     <label for="match">Match number: </label>
     <input type="text" id="match" class="form-control-inline">
@@ -100,7 +100,7 @@
         <option value="11">11</option>
         <option value="12+">12+</option>
       </select>
-      <label>Amp scored: </label>
+      <label>Co-Op: </label>
       <label>(Scouting Alliance) </label>
       <input id="scouting-alliance" type="checkbox">
       <label>(Opposing Alliance) </label>
@@ -150,13 +150,13 @@
   </div>
 
   <script>
-    // Function to generate QR code
+  
     function generateQRCode() {
-      // Clear existing QR code
+
       document.getElementById('qrcode').innerHTML = '';
 
       var dataToEncode = JSON.stringify({
-        // Include any data you want to encode in the QR code
+        
         name: document.getElementById('name').value,
         match: document.getElementById('match').value,
         robotnum: document.getElementById('robotnum').value,
@@ -185,10 +185,9 @@
       });
     }
 
-    // Event listener for the "Generate QR Code" button
     document.getElementById('generateQRCodeBtn').addEventListener('click', generateQRCode);
 
-    // Call the function when the page loads
+
     window.onload = generateQRCode;
   </script>
 </body>

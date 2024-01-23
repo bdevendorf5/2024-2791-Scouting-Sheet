@@ -145,6 +145,7 @@
       <h3>NOTES</h3>
       <textarea class="w-100" placeholder="Notes about the match" id="notes" cols="100" rows="3"></textarea>
     </div>
+    <button id="generateQRCodeBtn">Generate QR Code</button>
     <div id="qrcode"></div>
   </div>
 
@@ -181,11 +182,8 @@
       });
     }
 
-    // Add event listeners to input elements
-    var inputs = document.querySelectorAll('input, select, textarea');
-    inputs.forEach(function(input) {
-      input.addEventListener('change', generateQRCode);
-    });
+    // Event listener for the "Generate QR Code" button
+    document.getElementById('generateQRCodeBtn').addEventListener('click', generateQRCode);
 
     // Call the function when the page loads
     window.onload = generateQRCode;

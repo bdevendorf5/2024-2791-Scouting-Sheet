@@ -181,6 +181,12 @@
       });
     }
 
+    // Add event listeners to input elements
+    var inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(function(input) {
+      input.addEventListener('change', generateQRCode);
+    });
+
     // Call the function when the page loads
     window.onload = generateQRCode;
   </script>

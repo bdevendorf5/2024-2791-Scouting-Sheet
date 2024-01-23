@@ -152,6 +152,9 @@
   <script>
     // Function to generate QR code
     function generateQRCode() {
+      // Clear existing QR code
+      document.getElementById('qrcode').innerHTML = '';
+
       var dataToEncode = JSON.stringify({
         // Include any data you want to encode in the QR code
         name: document.getElementById('name').value,

@@ -5,23 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
   <title>Document</title>
 </head>
-  <style>
-    .top
-{
-  margin: 10px;
-}
-.auto, .teleop, .endgame, notes
-{
-  border: 1px solid black;
-  padding: 8px;
-}
-.main
-{
-  margin: 10px;
-}
-  </style>
+<style>
+  .top {
+    margin: 10px;
+  }
+  .auto, .teleop, .endgame, notes {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  .main {
+    margin: 10px;
+  }
+  #qrcode {
+    margin-top: 10px;
+  }
+</style>
 <body>
   <div class="top">
     <label for="name">Name: </label>
@@ -48,7 +49,7 @@
         <option value="3">3</option>
         <option value="4">4</option>
       </select>
-     <label for="auto-amp">Amp's scored: </label>
+      <label for="auto-amp">Amp's scored: </label>
       <select id="auto-amp">
         <option value="0">0</option>
         <option value="1">1</option>
@@ -100,9 +101,9 @@
         <option value="12+">12+</option>
       </select>
       <label>Amp scored: </label>
-      <label>(Scouting Allaince) </label>
+      <label>(Scouting Alliance) </label>
       <input id="scouting-alliance" type="checkbox">
-      <label>(Opposing Allaince) </label>
+      <label>(Opposing Alliance) </label>
       <input id="opposing-alliance" type="checkbox">
       <label for="amp-total">Total Amplification: </label>
       <select id="amp-total">
@@ -132,7 +133,7 @@
         <option value="4">4</option>
       </select>
       <label>Trap</label>
-      <select id="spotlight">
+      <select id="trap">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -144,6 +145,44 @@
       <h3>NOTES</h3>
       <textarea class="w-100" placeholder="Notes about the match" id="notes" cols="100" rows="3"></textarea>
     </div>
+    <div id="qrcode"></div>
   </div>
+
+  <script>
+    // Function to generate QR code
+    function generateQRCode() {
+      var dataToEncode = JSON.stringify({
+        // Include any data you want to encode in the QR code
+        name: document.getElementById('name').value,
+        match: document.getElementById('match').value,
+        robotnum: document.getElementById('robotnum').value,
+        color: document.getElementById('color').value,
+        mobility: document.getElementById('mobility').checked,
+        start: document.getElementById('start').value,
+        autoAmp: document.getElementById('auto-amp').value,
+        autoSpeaker: document.getElementById('auto-speaker').value,
+        speaker: document.getElementById('speaker').value,
+        amp: document.getElementById('amp').value,
+        scoutingAlliance: document.getElementById('scouting-alliance').checked,
+        opposingAlliance: document.getElementById('opposing-alliance').checked,
+        ampTotal: document.getElementById('amp-total').value,
+        park: document.getElementById('park').checked,
+        climb: document.getElementById('climb').checked,
+        cH: document.getElementById('c+h').checked,
+        spotlight: document.getElementById('spotlight').value,
+        trap: document.getElementById('trap').value,
+        notes: document.getElementById('notes').value,
+      });
+
+      var qrcode = new QRCode(document.getElementById('qrcode'), {
+        text: dataToEncode,
+        width: 128,
+        height: 128
+      });
+    }
+
+    // Call the function when the page loads
+    window.onload = generateQRCode;
+  </script>
 </body>
 </html>

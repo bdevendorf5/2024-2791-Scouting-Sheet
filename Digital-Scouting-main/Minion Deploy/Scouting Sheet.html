@@ -1,153 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-  <title>Document</title>
-</head>
-<style>
-  .top {
-    margin: 10px;
-  }
-  .auto, .teleop, .endgame, notes {
-    border: 1px solid black;
-    padding: 8px;
-  }
-  .main {
-    margin: 10px;
-  }
-  #qrcode {
-    margin-top: 10px;
-  }
-</style>
-<body>
-  <div class="top">
-    <label for="name">Initals: </label>
-    <input type="text" id="name" class="form-control-inline">
-    <label for="match">Match number: </label>
-    <input type="text" id="match" class="form-control-inline">
-    <label for="robotnum">Robot Number: </label>
-    <input type="text" id="robotnum" class="form-control-inline">
-    <label for="color">Alliance color: </label>    
-    <select id="color">
-      <option value="red">Red</option>
-      <option value="blue">Blue</option>
-    </select>
-  </div>
-  <div class="main">
-    <div class="auto">
-      <h2>AUTO</h2>
-      <label for="mobility">Mobility: </label>
-      <input type="checkbox" id="mobility">
-      <label for="start">Starting position: </label>
-      <select id="start">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-      <label for="auto-amp">Amp's scored: </label>
-      <select id="auto-amp">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4+">4+</option>
-      </select>
-      <label for="auto-speaker">Speaker scored: </label>
-      <select id="auto-speaker">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4+">4+</option>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+  </head>
+  <style>
+    .top {
+      margin: 10px;
+    }
+
+    .auto,
+    .teleop,
+    .endgame,
+    notes {
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    .main {
+      margin: 10px;
+    }
+
+    /*apply css properties to body tag*/
+    body {
+      position: absolute;
+      left: 0%;
+      text-align: center;
+    }
+
+    /*apply css properties to container class*/
+    .container1,
+    .container2,
+    .container3,
+    .container4,
+    .container5 {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      height: 100%;
+      text-align: center;
+    }
+
+    /*apply css properties to button tag*/
+    .button {
+      width: 25px;
+      height: 25px;
+      font-size: 10px;
+      background-color: white;
+      color: black;
+    }
+
+    /*apply hover effect to button tag*/
+    /*apply css properties to h2 tag*/
+    h2 {
+      color: black;
+      margin: 0 10px;
+      font-size: 10;
+    }
+
+    /*apply css properties to h1 tag*/
+  </style>
+  <body>
+    <script>
+      //initializing a variable name data
+      let data1 = 0;
+      let data2 = 0;
+      let data3 = 0;
+      let data4 = 0;
+      let data5 = 0;
+      //printing default value of data that is 0 in h2 tag
+      document.getElementById("counting1").innerText = data1;
+      document.getElementById("counting2").innerText = data2;
+      document.getElementById("counting3").innerText = data3;
+      document.getElementById("counting4").innerText = data4;
+      document.getElementById("counting5").innerText = data5;
+
+      function increment1() {
+        data1 = data1 + 1;
+        document.getElementById("counting1").innerText = data1;
+      }
+      //creation of decrement function
+      function decrement1() {
+        data1 = data1 - 1;
+        document.getElementById("counting1").innerText = data1;
+      }
+
+      function increment2() {
+        data2 = data2 + 1;
+        document.getElementById("counting2").innerText = data2;
+      }
+      //creation of decrement function
+      function decrement2() {
+        data2 = data2 - 1;
+        document.getElementById("counting2").innerText = data2;
+      }
+
+      function increment3() {
+        data3 = data3 + 1;
+        document.getElementById("counting3").innerText = data3;
+      }
+      //creation of decrement function
+      function decrement3() {
+        data3 = data3 - 1;
+        document.getElementById("counting3").innerText = data3;
+      }
+
+      function increment4() {
+        data4 = data4 + 1;
+        document.getElementById("counting4").innerText = data4;
+      }
+      //creation of decrement function
+      function decrement4() {
+        data4 = data4 - 1;
+        document.getElementById("counting4").innerText = data4;
+      }
+
+      function increment5() {
+        data5 = data5 + 1;
+        document.getElementById("counting5").innerText = data5;
+      }
+      //creation of decrement function
+      function decrement5() {
+        data5 = data5 - 1;
+        document.getElementById("counting5").innerText = data5;
+      }
+    </script>
+    <div class="top">
+      <label for="name">Initials: </label>
+      <input type="text" id="name" class="form-control-inline">
+      <label for="match">Match Number: </label>
+      <input type="text" id="match" class="form-control-inline">
+      <label for="robotnum">Robot Number: </label>
+      <input type="text" id="robotnum" class="form-control-inline">
+      <label for="color">Alliance color: </label>
+      <select id="color">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
       </select>
     </div>
-    <div class="teleop">
-      <h2>TELEOP</h2>
-      <label for="speaker">Speaker scored: </label>
-      <select id="speaker">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12+">12+</option>
-      </select>
-      <label for="amp">Amp scored: </label>
-      <select id="amp">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12+">12+</option>
-      </select>
-      <label>Co-Op: </label>
-      <label>(Scouting Alliance) </label>
-      <input id="scouting-alliance" type="checkbox">
-      <label>(Opposing Alliance) </label>
-      <input id="opposing-alliance" type="checkbox">
-      <label for="amp-total">Total Points During Amplification: </label>
-      <select id="amp-total">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6+">6+</option>
-      </select>
+    <div class="main">
+      <div class="auto">
+        <h2>AUTO</h2>
+        <div>
+          <label for="mobility">Mobility: </label>
+          <input type="checkbox" id="mobility">
+        </div>
+        <div>
+          <label for="start">Starting position: </label>
+          <select id="start">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="container1">
+          <label for="auto-amp">Amp's scored: </label>
+          <button onclick="increment1()">+</button>
+          <h2 id="counting1">0</h2>
+          <button onclick="decrement1()">-</button>
+        </div>
+        <div class="container2">
+          <label for="auto-speaker">Speaker scored: </label>
+          <button onclick="increment2()">+</button>
+          <h2 id="counting2">0</h2>
+          <button onclick="decrement2()">-</button>
+        </div>
+      </div>
+      <div class="teleop">
+        <h2>TELEOP</h2>
+        <div class="container3">
+          <label for="speaker">Speaker Scored: </label>
+          <button onclick="increment3()">+</button>
+          <h2 id="counting3">0</h2>
+          <button onclick="decrement3()">-</button>
+        </div>
+        <div class="container4">
+          <label for="amp">Amp Scored: </label>
+          <button onclick="increment4()">+</button>
+          <h2 id="counting4">0</h2>
+          <button onclick="decrement4()">-</button>
+        </div>
+        <div class="container5">
+          <label for="amplification"> Amplification </label>
+          <button onclick="increment5()">+</button>
+          <h2 id="counting5">0</h2>
+          <button onclick="decrement5()">-</button>
+        </div>
+        <label>Co-op: </label>
+        <input id="co-op" type="checkbox">
+      </div>
+      <div class="endgame">
+        <h2>ENDGAME</h2>
+        <label>Park</label>
+        <input id="park" type="checkbox">
+        <label>Climb</label>
+        <input id="climb" type="checkbox">
+        <label>Harmony</label>
+        <input id="harmony" type="checkbox">
+        <label>Spotlight</label>
+        <select id="spotlight">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <label>Trap</label>
+        <select id="trap">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="notes">
+        <h3>NOTES</h3>
+        <textarea class="w-100" placeholder="Notes about the match" id="notes" cols="100" rows="3"></textarea>
+      </div>
     </div>
-    <div class="endgame">
-      <h2>ENDGAME</h2>
-      <label>Park</label>
-      <input id="park" type="radio">
-      <label>Climb</label>
-      <input id="climb" type="radio">
-      <label>Climb + Harmony</label>
-      <input id="c+h" type="radio">
-      <label>Spotlight</label>
-      <select id="spotlight">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-      <label>Trap</label>
-      <select id="trap">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
-    </div>
-    <div class="notes">
-      <h3>NOTES</h3>
-      <textarea class="w-100" placeholder="Notes about the match" id="notes" cols="100" rows="3"></textarea>
-    </div>
-    <button id="generateQRCodeBtn">Generate QR Code</button>
-    <div id="qrcode"></div>
-  </div>
+
 
   <script>
   

@@ -33,7 +33,63 @@
 
                 </div>
             </div>
+    <script>
+      let data1 = 0;
+      let data2 = 0;
+      let data3 = 0;
+      let data4 = 0;
+      let data5 = 0;
+      document.getElementById("counting1").innerText = data1;
+      document.getElementById("counting2").innerText = data2;
+      document.getElementById("counting3").innerText = data3;
+      document.getElementById("counting4").innerText = data4;
+      document.getElementById("counting5").innerText = data5;
 
+      function increment1() {
+        data1 = data1 + 1;
+        document.getElementById("counting1").innerText = data1;
+      }
+      function decrement1() {
+        data1 = data1 - 1;
+        document.getElementById("counting1").innerText = data1;
+      }
+
+      function increment2() {
+        data2 = data2 + 1;
+        document.getElementById("counting2").innerText = data2;
+      }
+      function decrement2() {
+        data2 = data2 - 1;
+        document.getElementById("counting2").innerText = data2;
+      }
+
+      function increment3() {
+        data3 = data3 + 1;
+        document.getElementById("counting3").innerText = data3;
+      }
+      function decrement3() {
+        data3 = data3 - 1;
+        document.getElementById("counting3").innerText = data3;
+      }
+
+      function increment4() {
+        data4 = data4 + 1;
+        document.getElementById("counting4").innerText = data4;
+      }
+      function decrement4() {
+        data4 = data4 - 1;
+        document.getElementById("counting4").innerText = data4;
+      }
+
+      function increment5() {
+        data5 = data5 + 1;
+        document.getElementById("counting5").innerText = data5;
+      }
+      function decrement5() {
+        data5 = data5 - 1;
+        document.getElementById("counting5").innerText = data5;
+      }
+    </script>
 
             <table style="width: 100%;">
                 <colgroup>
@@ -200,6 +256,11 @@
             harmonyEle + "," +
             spotlightEle + "," +
             trapEle + "," +
+            data1 + "," +
+            data2 + "," +
+            data3 + "," +
+            data4 + "," +
+            data5 + "," +
             notes.value;
 
 

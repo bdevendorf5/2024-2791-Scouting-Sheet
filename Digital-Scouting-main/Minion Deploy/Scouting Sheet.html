@@ -66,10 +66,10 @@
                                     <input class="rounded" type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="Au2" name='A2' value="A2-Yes">
+                                    <input type="checkbox" id="park" name='park' value="park-Yes">
                                 </td>
                                 <td>
-                                    <input class="rounded" type="checkbox" id="Au3" name='A3' value="A3-Yes">
+                                    <input type="checkbox" id="climb" name='climb' value="climb-Yes">
                                 </td>
                             </tr>
                         </table>
@@ -117,16 +117,16 @@
  
 
 
-        if (Au2.checked) {
-            var A2Ele = "1";
+        if (park.checked) {
+            var ParkEle = "1";
         } else {
-            var A2Ele = "0";
+            var ParkEle = "0";
         }
 
-        if (Au3.checked) {
-            var A3Ele = "1";
+        if (climb.checked) {
+            var ClimbEle = "1";
         } else {
-            var A3Ele = "0";
+            var ClimbEle = "0";
         }
 
 
@@ -168,10 +168,8 @@
             MobilityEle + "," +
             StartEle + "," +
             CoopEle + "," +
-            
-            
-            A2Ele + "," +
-            A3Ele + "," +
+            ParkEle + "," +
+            ClimbEle + "," +
             notes.value;
 
 

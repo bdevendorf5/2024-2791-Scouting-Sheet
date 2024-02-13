@@ -665,7 +665,13 @@
                                     <label><input type="radio" value="e5" name='DefTime'></label>
                                 </td>
                                 <td>
-                                    <label><input type="radio" value="5" name='DfdTime'></label>
+                                              <label for="start">Starting position: </label>
+                                                        <select name="start" id="start">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                        </select>
                                 </td>
                             </tr>
                         </table>
@@ -747,6 +753,7 @@
         var DefTimeEle = document.getElementsByName('DefTime');
         var DfdTimeEle = document.getElementsByName('DfdTime');
         var AllianceEle = document.getElementById("Alliance").value;
+                var StartEle = document.getElementById("start").value;
 
          for(i = 0; i < SPEle.length; i++) {
       if(SPEle[i].checked)
@@ -808,6 +815,8 @@
             robotNum.value + "," +
             AllianceEle + "," +
             MobilityEle + "," +
+            StartEle + "," +
+            
             A1Ele + "," +
             A2Ele + "," +
             A3Ele + "," +

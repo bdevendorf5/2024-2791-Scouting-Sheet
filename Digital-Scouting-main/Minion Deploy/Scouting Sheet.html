@@ -63,7 +63,7 @@
                             </thead>
                             <tr>
                                 <td>
-                                    <input class="rounded" type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
+                                    <input type="checkbox" id="harmony" name='harmony' value="harmony-Yes">
                                 </td>
                                 <td>
                                     <input type="checkbox" id="park" name='park' value="park-Yes">
@@ -129,7 +129,6 @@
             var ClimbEle = "0";
         }
 
-
         if (Mobility.checked) {
             var MobilityEle = "1";
         } else {
@@ -140,6 +139,12 @@
             var CoopEle = "1";
         } else {
             var CoopEle = "0";
+        }
+
+        if (harmony.checked) {
+            var harmonyEle = "1";
+        } else {
+            var harmonyEle = "0";
         }
 
 
@@ -170,6 +175,7 @@
             CoopEle + "," +
             ParkEle + "," +
             ClimbEle + "," +
+            harmonyEle + "," +
             notes.value;
 
 

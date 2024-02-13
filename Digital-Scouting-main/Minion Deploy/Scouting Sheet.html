@@ -436,7 +436,6 @@
 </body>
 <script>
     var qrcode = new QRCode("qrcode");
-    var qrcode2 = new QRCode("qrcode2");
 
 
     function makeCode() {
@@ -469,70 +468,9 @@
         }
 
 
-        
-        if (Helped.checked) {
-            var HelpedEle = "1";
-        } else {
-            var HelpedEle = "0";
-        }
 
-        var SPEle = document.getElementsByName('SP');
-        var AclimbEle = document.getElementsByName('Aclimb');
-        var LinksEle = document.getElementById("Links").value;
-        var CyclesEle = document.getElementById("Cycles").value;
-        var FedEle = document.getElementById("Fed").value;
-        var OpinionE = document.getElementsByName('Opinion');
-
-        var ClimbEle = document.getElementsByName('Climb');
-        var DeadEle = document.getElementsByName('Dead');
-        var FoulsEle = document.getElementsByName('Fouls');
-        var DefEffEle = document.getElementsByName('DefEff');
-        var DfdEffEle = document.getElementsByName('DfdEff');
-        var DefTimeEle = document.getElementsByName('DefTime');
-        var DfdTimeEle = document.getElementsByName('DfdTime');
         var AllianceEle = document.getElementById("Alliance").value;
-                var StartEle = document.getElementById("start").value;
-
-         for(i = 0; i < SPEle.length; i++) {
-      if(SPEle[i].checked)
-      var SPE = SPEle[i].value;
-  } 
-         for(i = 0; i < AclimbEle.length; i++) {
-      if(AclimbEle[i].checked)
-      var AclimbE = AclimbEle[i].value;
-  }
-         for(i = 0; i < OpinionE.length; i++) {
-      if(OpinionE[i].checked)
-      var OpE = OpinionE[i].value;
-  }
-         for(i = 0; i < ClimbEle.length; i++) {
-      if(ClimbEle[i].checked)
-      var ClimbE = ClimbEle[i].value;
-  }
-         for(i = 0; i < DeadEle.length; i++) {
-      if(DeadEle[i].checked)
-      var DeadE = DeadEle[i].value;
-  }
-         for(i = 0; i < FoulsEle.length; i++) {
-      if(FoulsEle[i].checked)
-      var FoulsE = FoulsEle[i].value;
-  } 
-         for(i = 0; i < DefEffEle.length; i++) {
-      if(DefEffEle[i].checked)
-      var DefEffE = DefEffEle[i].value;
-  }
-         for(i = 0; i < DfdEffEle.length; i++) {
-      if(DfdEffEle[i].checked)
-      var DfdEffE = DfdEffEle[i].value;
-  }
-         for(i = 0; i < DefTimeEle.length; i++) {
-      if(DefTimeEle[i].checked)
-      var DefTimeE = DefTimeEle[i].value;
-  }
-         for(i = 0; i < DfdTimeEle.length; i++) {
-      if(DfdTimeEle[i].checked)
-      var DfdTimeE = DfdTimeEle[i].value;
-  }
+        var StartEle = document.getElementById("start").value;
         
         
         
@@ -559,11 +497,6 @@
             
             A2Ele + "," +
             A3Ele + "," +
-            SPE + "," +
-            AclimbE + "," +
-            OpE + "," +
-            ClimbE + "," +
-            CyclesEle + "," +
             notes.value;
 
 

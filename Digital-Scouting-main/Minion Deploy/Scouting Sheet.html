@@ -66,10 +66,10 @@
                                     <input class="rounded" type="checkbox" id="Taxi" name='Taxi' value="Taxi-Yes">
                                 </td>
                                 <td>
-                                    <input type="checkbox" id="Au2" name='A2' value="A2-Yes">
+                                    <input type="checkbox" id="park" name='park' value="park-yes">
                                 </td>
                                 <td>
-                                    <input class="rounded" type="checkbox" id="Au3" name='A3' value="A3-Yes">
+                                    <input type="checkbox" id="climb" name='climb' value="climb-Yes">
                                 </td>
                             </tr>
                         </table>
@@ -443,16 +443,16 @@
  
 
 
-        if (Au2.checked) {
-            var A2Ele = "1";
+        if (park.checked) {
+            var parkEle = "1";
         } else {
-            var A2Ele = "0";
+            var parkEle = "0";
         }
 
-        if (Au3.checked) {
-            var A3Ele = "1";
+        if (climb.checked) {
+            var climbEle = "1";
         } else {
-            var A3Ele = "0";
+            var climbEle = "0";
         }
 
 
@@ -483,7 +483,6 @@
         var FedEle = document.getElementById("Fed").value;
         var OpinionE = document.getElementsByName('Opinion');
 
-        var ClimbEle = document.getElementsByName('Climb');
         var DeadEle = document.getElementsByName('Dead');
         var FoulsEle = document.getElementsByName('Fouls');
         var DefEffEle = document.getElementsByName('DefEff');
@@ -554,11 +553,11 @@
             AllianceEle + "," +
             MobilityEle + "," +
             StartEle + "," +
-            CoopEle + "," +
+            CoopEle + "," + 
+            parkEle + "," +
+            climbEle + "," +
+
             
-            
-            A2Ele + "," +
-            A3Ele + "," +
             SPE + "," +
             AclimbE + "," +
             OpE + "," +

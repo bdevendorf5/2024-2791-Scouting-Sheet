@@ -92,6 +92,27 @@
                                                             <option value="4">4</option>
                                                         </select>
                     </td>
+            <td>
+     <label>Spotlight </label>
+        <select id="spotlight">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <label>Trap </label>
+        <select id="trap">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+            </td>
+
+
+
+                    
                 </tr>
             </table>
 
@@ -151,7 +172,8 @@
 
         var AllianceEle = document.getElementById("Alliance").value;
         var StartEle = document.getElementById("start").value;
-        
+        var spotlightEle = document.getElementById("spotlight").value;
+        var trapEle = document.getElementById("trap").value;
         
         
         
@@ -176,6 +198,8 @@
             ParkEle + "," +
             ClimbEle + "," +
             harmonyEle + "," +
+            spotlightEle + "," +
+            trapEle + "," +
             notes.value;
 
 

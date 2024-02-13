@@ -91,17 +91,54 @@
       }
     </script>
 
-            <table style="width: 100%;">
-                <colgroup>
-                    <col style=" width:45%;">
-                    <col style=" width:55%;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>AUTO</th>
-                        <th>TELEOP</th>
-                    </tr>
-                </thead>
+<div class="main">
+      <div class="auto">
+        <h2>AUTO</h2>
+        <div>
+          <label for="start">Starting position: </label>
+          <select name="start" id="start">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="container1">
+          <label for="auto-amp">Amp's scored: </label>
+          <button onclick="increment1()">+</button>
+          <h2 id="counting1">0</h2>
+          <button onclick="decrement1()">-</button>
+        </div>
+        <div class="container2">
+          <label for="auto-speaker">Speaker scored: </label>
+          <button onclick="increment2()">+</button>
+          <h2 id="counting2">0</h2>
+          <button onclick="decrement2()">-</button>
+        </div>
+      </div>
+      <div class="teleop">
+        <h2>TELE-OP</h2>
+        <div class="container3">
+          <label for="speaker">Speaker Scored: </label>
+          <button onclick="increment3()">+</button>
+          <h2 id="counting3">0</h2>
+          <button onclick="decrement3()">-</button>
+        </div>
+        <div class="container4">
+          <label for="amp">Amp Scored: </label>
+          <button onclick="increment4()">+</button>
+          <h2 id="counting4">0</h2>
+          <button onclick="decrement4()">-</button>
+        </div>
+        <div class="container5">
+          <label for="amplification"> Amplification </label>
+          <button onclick="increment5()">+</button>
+          <h2 id="counting5">0</h2>
+          <button onclick="decrement5()">-</button>
+        </div>
+      </div>
+        </div>
+            </div>
                 <tr>
                     <td>
                         <table style="width: 100%;">
@@ -170,7 +207,6 @@
 
                     
                 </tr>
-            </table>
 
             <div style="width: 100%;">
                 <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>

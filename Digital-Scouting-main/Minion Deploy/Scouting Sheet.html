@@ -298,10 +298,10 @@
                                                 <input type="checkbox" id="Te25" name='T25' value="T25-Yes">
                                             </td>
                                             <td>
-                                                <input type="checkbox" id="climb" name='climb' value="climb-Yes">
+                                                <input type="checkbox" id="Te26" name='T26' value="T26-Yes">
                                             </td>
                                             <td>
-                                                <input type="checkbox" id="park" name='park' value="park-Yes">
+                                                <input type="checkbox" id="Te27" name='T27' value="T27-Yes">
                                             </td>
                                         </tr>
                                     </table>
@@ -368,7 +368,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="checkbox" id="co-op" name='co-op' value="co-op-Yes">
+                                                <input type="checkbox" id="Coop" name='Coop' value="Coop-Yes">
                                             </td>
                                             <td>
                                                 <div class="question">
@@ -699,28 +699,43 @@
 
 
     function makeCode() {
+        if (Taxi.checked) {
+            var A1Ele = "1";
+        } else {
+            var A1Ele = "0";
+        }
+
+
+
+        if (Au2.checked) {
+            var A2Ele = "1";
+        } else {
+            var A2Ele = "0";
+        }
+
+        if (Au3.checked) {
+            var A3Ele = "1";
+        } else {
+            var A3Ele = "0";
+        }
+
+
         if (Mobility.checked) {
             var MobilityEle = "1";
         } else {
             var MobilityEle = "0";
         }
 
-        if (co-op.checked) {
-            var coopEle = "1";
+        if (Coop.checked) {
+            var CoopEle = "1";
         } else {
-            var coopEle = "0";
+            var CoopEle = "0";
         }
 
-        if (park.checked) {
-            var parkEle = "1";
+        if (Helped.checked) {
+            var HelpedEle = "1";
         } else {
-            var parkEle = "0";
-        }
-
-        if (climb.checked) {
-            var climbEle = "1";
-        } else {
-            var climbEle = "0";
+            var HelpedEle = "0";
         }
 
         var SPEle = document.getElementsByName('SP');
@@ -801,10 +816,10 @@
             AllianceEle + "," +
             MobilityEle + "," +
             StartEle + "," +
-            coopEle + "," +
-            parkEle + "," +
-            climbEle + "," +
             
+            A1Ele + "," +
+            A2Ele + "," +
+            A3Ele + "," +
             SPE + "," +
             AclimbE + "," +
             OpE + "," +
@@ -837,6 +852,3 @@
 
 
 </html>
-
-
-

@@ -19,10 +19,10 @@
     .auto,
     .teleop,
     .endgame,
-    notes {
-      border: 1px solid black;
-      padding: 8px;
-    }
+  //  notes {
+    //  border: 1px solid black;
+   //   padding: 8px;
+ //   }
         body {
       text-align: center;
     }
@@ -223,9 +223,9 @@
             </td>
                 </div>
 
-            <div style="width: 100%;">
-                <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>
-            </div>
+         //   <div style="width: 100%;">
+        //        <input type="text" name="notes" placeholder="Notes" id='notes#txt' required/>
+         //   </div>
             <div>
                 var click = 0
                 <input type="button" id="bt" value="Create QR Code" onclick="makeCode()" onclick var click="Clicked" />
@@ -289,7 +289,7 @@
         const matchNum = document.getElementById('match#txt');
         const robotNum = document.getElementById('robot#txt');
         const name = document.getElementById('nametxt');
-        const notes = document.getElementById('notes#txt');
+  //      const notes = document.getElementById('notes#txt');
 
 
 
@@ -313,7 +313,7 @@
             spotlightEle + "," +
             trapEle + "," +
             data5 + "," +
-            notes.value;
+        //    notes.value;
 
 
 

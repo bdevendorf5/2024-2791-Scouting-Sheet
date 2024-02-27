@@ -84,13 +84,11 @@
       let data3 = 0;
       let data4 = 0;
       let data5 = 0;
-      let data6 = 0;
       document.getElementById("counting1").innerText = data1;
       document.getElementById("counting2").innerText = data2;
       document.getElementById("counting3").innerText = data3;
       document.getElementById("counting4").innerText = data4;
       document.getElementById("counting5").innerText = data5;
-      document.getElementById("counting6").innerText = data6;
 
       function increment1() {
         data1 = data1 + 1;
@@ -136,14 +134,6 @@
         data5 = data5 - 1;
         document.getElementById("counting5").innerText = data5;
       }
-      function increment6() {
-        data6 = data6 + 1;
-        document.getElementById("counting6").innerText = data6;
-      }
-      function decrement6() {
-        data6 = data6 - 1;
-        document.getElementById("counting6").innerText = data6;
-      }
     </script>
 
 <div class="main">
@@ -182,12 +172,6 @@
           <button onclick="increment3()">+</button>
           <h2 id="counting3">0</h2>
           <button onclick="decrement3()">-</button>
-        </div>
-        <div class="container6">
-          <label for="speaker">Speaker Scored: </label>
-          <button onclick="increment6()">+</button>
-          <h2 id="counting6">0</h2>
-          <button onclick="decrement6()">-</button>
         </div>
         <div class="container4">
           <label for="amp">Amp Scored: </label>
@@ -328,7 +312,6 @@
             data3 + "," +
             data4 + "," +
             data5 + "," +
-            data6 + "," +
             notes.value;
 
 

@@ -34,8 +34,7 @@
     .container1,
     .container2,
     .container3,
-    .container4,
-    .container5 {
+    .container4 {
       justify-content: center;
       align-items: center;
       display: flex;
@@ -115,12 +114,6 @@
           <input type=button value="+" onclick="increment4()"/>
           <h2 id="counting4">0</h2>
           <input type=button value="-" onclick="decrement4()"/>
-        </div>
-        <div class="container5">
-          <label for="amplification"> Amplified Notes Scored: </label>
-          <input type=button value="+" onclick="increment5()"/>
-          <h2 id="counting5">0</h2>
-          <input type=button value="-" onclick="decrement5()"/>
         </div>
           <tr>
           </tr>
@@ -219,15 +212,6 @@
         data4 = data4 - 1;
         document.getElementById("counting4").innerText = data4;
       }
-
-      function increment5() {
-        data5 = data5 + 1;
-        document.getElementById("counting5").innerText = data5;
-      }
-      function decrement5() {
-        data5 = data5 - 1;
-        document.getElementById("counting5").innerText = data5;
-      }
     
     var qrcode = new QRCode("qrcode");
 
@@ -293,7 +277,6 @@
             harmonyEle + "," +
             spotlightEle + "," +
             trapEle + "," +
-            data5 + "," +
             notes.value;
 
 

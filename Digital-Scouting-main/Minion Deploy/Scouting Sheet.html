@@ -88,15 +88,7 @@
                         <label>Mobility: </label>
                         <input type="checkbox" id="Mobility" name='Mobility' value="Mobility-Yes">
                     </td>
-                    <td>
-                                              <label for="start">Starting position: </label>
-                                                        <select name="start" id="start">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4">4</option>
-                                                        </select>
-                    </td>
+                
         <div class="container1">
           <label for="auto-amp">Amp scored: </label>
           <input type=button value="+" onclick="increment1()"/>
@@ -271,7 +263,6 @@
 
 
         var AllianceEle = document.getElementById("Alliance").value;
-        var StartEle = document.getElementById("start").value;
         var spotlightEle = document.getElementById("spotlight").value;
         var trapEle = document.getElementById("trap").value;
         
@@ -292,7 +283,6 @@
             matchNum.value + "," +
             robotNum.value + "," +
             AllianceEle + "," +
-            StartEle + "," +
             MobilityEle + "," +
             data1 + "," +
             data2 + "," +
